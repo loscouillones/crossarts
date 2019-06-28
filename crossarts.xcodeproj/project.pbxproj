@@ -16,6 +16,7 @@
 		377DCFED22C61482008D8077 /* crossartsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DCFEC22C61482008D8077 /* crossartsUITests.swift */; };
 		377DCFFB22C6158D008D8077 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377DCFFA22C6158D008D8077 /* Favorites.storyboard */; };
 		377DCFFD22C6159B008D8077 /* Badges.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377DCFFC22C6159B008D8077 /* Badges.storyboard */; };
+		377DD00322C63A5A008D8077 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377DD00222C63A5A008D8077 /* About.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		377DCFEE22C61482008D8077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		377DCFFA22C6158D008D8077 /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		377DCFFC22C6159B008D8077 /* Badges.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Badges.storyboard; sourceTree = "<group>"; };
+		377DD00222C63A5A008D8077 /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				377DCFD022C61480008D8077 /* HomeAndDetails.storyboard */,
 				377DCFFC22C6159B008D8077 /* Badges.storyboard */,
 				377DCFFA22C6158D008D8077 /* Favorites.storyboard */,
+				377DD00222C63A5A008D8077 /* About.storyboard */,
 			);
 			path = Boards;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			files = (
 				377DCFD722C61482008D8077 /* LaunchScreen.storyboard in Resources */,
 				377DCFFD22C6159B008D8077 /* Badges.storyboard in Resources */,
+				377DD00322C63A5A008D8077 /* About.storyboard in Resources */,
 				377DCFD422C61482008D8077 /* Assets.xcassets in Resources */,
 				377DCFFB22C6158D008D8077 /* Favorites.storyboard in Resources */,
 				377DCFD222C61480008D8077 /* HomeAndDetails.storyboard in Resources */,
