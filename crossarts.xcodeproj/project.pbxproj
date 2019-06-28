@@ -17,6 +17,7 @@
 		377DCFFB22C6158D008D8077 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377DCFFA22C6158D008D8077 /* Favorites.storyboard */; };
 		377DCFFD22C6159B008D8077 /* Badges.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377DCFFC22C6159B008D8077 /* Badges.storyboard */; };
 		377DD00322C63A5A008D8077 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377DD00222C63A5A008D8077 /* About.storyboard */; };
+		377DD00622C63EFD008D8077 /* LoaderUIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DD00522C63EFD008D8077 /* LoaderUIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		377DCFFA22C6158D008D8077 /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		377DCFFC22C6159B008D8077 /* Badges.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Badges.storyboard; sourceTree = "<group>"; };
 		377DD00222C63A5A008D8077 /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		377DD00522C63EFD008D8077 /* LoaderUIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderUIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		377DCFCB22C61480008D8077 /* crossarts */ = {
 			isa = PBXGroup;
 			children = (
+				377DD00422C63EDE008D8077 /* Extensions */,
 				377DCFFE22C615AA008D8077 /* Boards */,
 				377DD00122C61671008D8077 /* App */,
 				377DD00022C61635008D8077 /* Views */,
@@ -164,6 +167,14 @@
 				377DCFCC22C61480008D8077 /* AppDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		377DD00422C63EDE008D8077 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				377DD00522C63EFD008D8077 /* LoaderUIViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377DD00622C63EFD008D8077 /* LoaderUIViewExtension.swift in Sources */,
 				377DCFCF22C61480008D8077 /* HomeViewController.swift in Sources */,
 				377DCFCD22C61480008D8077 /* AppDelegate.swift in Sources */,
 			);
