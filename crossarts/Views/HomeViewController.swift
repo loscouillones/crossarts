@@ -47,7 +47,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
     
     func testLoader() {
         showLoader()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             // Code you want to be delayed
             self.hideLoader()
         }
