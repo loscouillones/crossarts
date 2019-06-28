@@ -18,6 +18,9 @@
 		377DCFFD22C6159B008D8077 /* Badges.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377DCFFC22C6159B008D8077 /* Badges.storyboard */; };
 		377DD00322C63A5A008D8077 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377DD00222C63A5A008D8077 /* About.storyboard */; };
 		377DD00622C63EFD008D8077 /* LoaderUIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DD00522C63EFD008D8077 /* LoaderUIViewExtension.swift */; };
+		377DD00822C64B20008D8077 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DD00722C64B20008D8077 /* Artwork.swift */; };
+		377DD00A22C65057008D8077 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DD00922C65057008D8077 /* Category.swift */; };
+		377DD00C22C6515B008D8077 /* HomeArtCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DD00B22C6515B008D8077 /* HomeArtCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		377DCFFC22C6159B008D8077 /* Badges.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Badges.storyboard; sourceTree = "<group>"; };
 		377DD00222C63A5A008D8077 /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		377DD00522C63EFD008D8077 /* LoaderUIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderUIViewExtension.swift; sourceTree = "<group>"; };
+		377DD00722C64B20008D8077 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		377DD00922C65057008D8077 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		377DD00B22C6515B008D8077 /* HomeArtCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeArtCollectionViewCell.swift; path = crossarts/Views/HomeArtCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,8 @@
 		377DCFFF22C61612008D8077 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				377DD00722C64B20008D8077 /* Artwork.swift */,
+				377DD00922C65057008D8077 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				377DCFCE22C61480008D8077 /* HomeViewController.swift */,
+				377DD00B22C6515B008D8077 /* HomeArtCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -312,8 +321,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				377DD00622C63EFD008D8077 /* LoaderUIViewExtension.swift in Sources */,
+				377DD00A22C65057008D8077 /* Category.swift in Sources */,
 				377DCFCF22C61480008D8077 /* HomeViewController.swift in Sources */,
+				377DD00822C64B20008D8077 /* Artwork.swift in Sources */,
 				377DCFCD22C61480008D8077 /* AppDelegate.swift in Sources */,
+				377DD00C22C6515B008D8077 /* HomeArtCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

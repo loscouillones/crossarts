@@ -65,7 +65,7 @@ extension UIViewController {
                 { $0.tag == self.loaderViewTag }).first {
                 // loaderViewTag.stopAnimating()
                 loaderView.removeFromSuperview()
-                self.view.isUserInteractionEnabled = false
+                self.view.isUserInteractionEnabled = true
             }
         }
     }

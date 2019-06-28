@@ -18,19 +18,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a14-s0-2Wn">
-                                <rect key="frame" x="184" y="332" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="hxd-HG-2lN" kind="show" id="lmR-eO-2Ld"/>
-                                </connections>
-                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aZ7-ts-5c1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0I8-sB-Eyf">
+                                    <size key="itemSize" width="416" height="725"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeArtCollectionViewCell" id="my7-x4-fhO" customClass="HomeArtCollectionViewCell" customModule="crossarts" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="416" height="725"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="416" height="725"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La Joconde" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJn-6d-DpM">
+                                                    <rect key="frame" x="20" y="20" width="376" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Joconde" translatesAutoresizingMaskIntoConstraints="NO" id="mM6-9y-4pD">
+                                                    <rect key="frame" x="68" y="132" width="280" height="393"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Le saviez-vous ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KC-oM-zyQ">
+                                                    <rect key="frame" x="60" y="565" width="296" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dsgdsgsdgsdggds" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nTz-rV-NzH">
+                                                    <rect key="frame" x="60" y="606" width="296" height="79"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="vJn-6d-DpM" firstAttribute="leading" secondItem="my7-x4-fhO" secondAttribute="leading" constant="20" id="3pm-rl-q08"/>
+                                            <constraint firstItem="mM6-9y-4pD" firstAttribute="top" secondItem="my7-x4-fhO" secondAttribute="topMargin" constant="80" id="ApB-LY-ugJ"/>
+                                            <constraint firstItem="nTz-rV-NzH" firstAttribute="top" secondItem="9KC-oM-zyQ" secondAttribute="bottom" constant="20" id="Den-v8-cZC"/>
+                                            <constraint firstAttribute="bottom" secondItem="nTz-rV-NzH" secondAttribute="bottom" constant="40" id="GSo-Wk-I9f"/>
+                                            <constraint firstItem="nTz-rV-NzH" firstAttribute="leading" secondItem="my7-x4-fhO" secondAttribute="leading" constant="60" id="HlC-BY-3Oy"/>
+                                            <constraint firstAttribute="trailing" secondItem="nTz-rV-NzH" secondAttribute="trailing" constant="60" id="PUB-jk-ffk"/>
+                                            <constraint firstItem="9KC-oM-zyQ" firstAttribute="leading" secondItem="my7-x4-fhO" secondAttribute="leading" constant="60" id="RKX-Bs-tFc"/>
+                                            <constraint firstItem="9KC-oM-zyQ" firstAttribute="top" secondItem="mM6-9y-4pD" secondAttribute="bottom" constant="40" id="WKT-Of-oYa"/>
+                                            <constraint firstItem="mM6-9y-4pD" firstAttribute="leading" secondItem="my7-x4-fhO" secondAttribute="leadingMargin" constant="60" id="YxG-VL-LJC"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="mM6-9y-4pD" secondAttribute="trailing" constant="60" id="hXP-Pi-yl7"/>
+                                            <constraint firstAttribute="trailing" secondItem="vJn-6d-DpM" secondAttribute="trailing" constant="20" id="jcW-5k-Oem"/>
+                                            <constraint firstItem="vJn-6d-DpM" firstAttribute="top" secondItem="my7-x4-fhO" secondAttribute="top" constant="20" id="tse-qd-4hC"/>
+                                            <constraint firstAttribute="bottom" secondItem="mM6-9y-4pD" secondAttribute="bottom" constant="200" id="ujx-qj-Zcy"/>
+                                            <constraint firstAttribute="trailing" secondItem="9KC-oM-zyQ" secondAttribute="trailing" constant="60" id="zIQ-Ky-GkL"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="titleImageView" destination="mM6-9y-4pD" id="qez-Ia-PMc"/>
+                                            <outlet property="titleLabel" destination="vJn-6d-DpM" id="oLJ-yh-XtO"/>
+                                            <outlet property="triviaTextField" destination="nTz-rV-NzH" id="fMK-eS-LFu"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aZ7-ts-5c1" secondAttribute="bottom" id="BLz-8H-7mX"/>
+                            <constraint firstItem="aZ7-ts-5c1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Bo2-Kx-28T"/>
+                            <constraint firstItem="aZ7-ts-5c1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mtP-yC-Upp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aZ7-ts-5c1" secondAttribute="trailing" id="peE-au-oLd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Zch-sp-F9a"/>
+                    <connections>
+                        <outlet property="artsCollectionView" destination="aZ7-ts-5c1" id="SEB-1P-aoh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,4 +192,7 @@
             <point key="canvasLocation" x="957.97101449275374" y="20.758928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Joconde" width="2250" height="3375"/>
+    </resources>
 </document>
