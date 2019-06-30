@@ -9,12 +9,11 @@
 import Foundation
 
 struct Badge {
-    let id: Int,
-    let categoryId: Int,
-    let name: String,
-    let subtitle: String,
-    let obtained: Int,
-    let minimumViews: Int,
-    let views: Int,
+    let id: Int
+    let categoryId: Int
+    let name: String
+    let subtitle: String
+    let obtained: Int
+    let views: Int
     let thresholds: Array<Int>
 }
