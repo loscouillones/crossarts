@@ -30,6 +30,7 @@
 		CDB9B5B63103E7250E7A5BC8 /* Pods_crossarts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDF1D493B24D017C5D6C32 /* Pods_crossarts.framework */; };
 		767C259922CA3F3A005DFE14 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767C259822CA3F3A005DFE14 /* Favorite.swift */; };
 		767C259C22CA4C05005DFE14 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767C259B22CA4C05005DFE14 /* FavoritesViewController.swift */; };
+		E543DBEE22CAB76C0093147C /* FavoritesListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E543DBED22CAB76C0093147C /* FavoritesListViewCell.swift */; };
 		E57C787422C806DD003AAA15 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57C787322C806DD003AAA15 /* Badge.swift */; };
 		ED2EAF6E5D735998F7B0B4ED /* Pods_crossartsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126D91F424830FD8DE52088C /* Pods_crossartsTests.framework */; };
 		FCC73C75BBC257BDCEB93CFA /* Pods_crossartsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B197F6BC7A89657B0B9CEA9 /* Pods_crossartsUITests.framework */; };
@@ -89,6 +90,7 @@
 		B38EF0D222CC0B53004D3B33 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		767C259822CA3F3A005DFE14 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		767C259B22CA4C05005DFE14 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		E543DBED22CAB76C0093147C /* FavoritesListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewCell.swift; sourceTree = "<group>"; };
 		E57C787322C806DD003AAA15 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		E999A6F99E5350797A2814A8 /* Pods-crossartsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crossartsUITests.release.xcconfig"; path = "Target Support Files/Pods-crossartsUITests/Pods-crossartsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,6 +219,7 @@
 				767C259B22CA4C05005DFE14 /* FavoritesViewController.swift */,
 				377DD00B22C6515B008D8077 /* HomeArtCollectionViewCell.swift */,
 				37CC644E22CA15CB00056EFD /* ArtDetailViewController.swift */,
+				E543DBED22CAB76C0093147C /* FavoritesListViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				E57C787422C806DD003AAA15 /* Badge.swift in Sources */,
 				B38EF0D322CC0B53004D3B33 /* User.swift in Sources */,
 				767C259C22CA4C05005DFE14 /* FavoritesViewController.swift in Sources */,
+				E543DBEE22CAB76C0093147C /* FavoritesListViewCell.swift in Sources */,
 				377DD00622C63EFD008D8077 /* LoaderUIViewExtension.swift in Sources */,
 				37FE82F322CB5B870018EE50 /* ImageViewDropShadowExtension.swift in Sources */,
 				372247F022CB9D1000562FFB /* LikeButton.swift in Sources */,

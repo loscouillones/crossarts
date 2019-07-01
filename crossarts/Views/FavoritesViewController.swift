@@ -8,8 +8,8 @@
 import UIKit
 import Foundation
 
-class FavoritesViewController: UIViewController, UICollectionViewDataSource {
-    
+class FavoritesViewController: UIViewController, UITableViewDataSource {
+
     
     var favorites = [
         Favorite(
@@ -22,21 +22,17 @@ class FavoritesViewController: UIViewController, UICollectionViewDataSource {
             favoriteID: 03
         )]
     
-    @IBOutlet weak var favoritesListView: UITableView!
     
-    func prepareCollectionView() {
-        favoritesListView.dataSource = self as! UITableViewDataSource
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return favorites.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoritesCollectionViewCell", for: indexPath) as! FavoritesCollectionViewCell
-        let favorite = favorites[indexPath.item]
-        cell.favorite = favorite
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withReuseIdentifier: "FavoritesListViewCell", for: indexPath) as! FavoritesListViewCell
+        let fav = favorites[indexPath.item]
+        cell.fav = fav
         
         return cell
     }
+    
 }
