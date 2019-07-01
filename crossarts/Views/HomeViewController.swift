@@ -83,7 +83,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeArtCollectionViewCell", for: indexPath) as! HomeArtCollectionViewCell
         let art = homeArts[indexPath.item]
         cell.art = art
-
+        
         return cell
     }
 }

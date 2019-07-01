@@ -13,7 +13,7 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var titleImageView: UIImageView!
-    
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var triviaTextField: UITextField!
     
     var art: Artwork! {
@@ -35,5 +35,16 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
             titleLabel.text = nil
             triviaTextField.text = nil
         }
+        
+        setBorders()
     }
+    
+    func setBorders() {
+        backView.layer.cornerRadius = 10.0
+        backView.layer.masksToBounds = true
+
+        titleImageView.layer.cornerRadius = 10.0
+        titleImageView.layer.masksToBounds = true
+    }
+    
 }
