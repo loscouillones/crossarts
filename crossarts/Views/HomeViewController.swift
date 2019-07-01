@@ -44,7 +44,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
                             tags: [],
                             date: Date())]
 
-    let cellScale: CGFloat = 1.0
+    let cellScale: CGFloat = 0.8
     
     @IBOutlet weak var artsCollectionView: UICollectionView!
     
@@ -63,10 +63,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        title = "Home"
+        // navigationItem.title = "navItem"
         testLoader()
         prepareCollectionView()
         // debug
-        artsCollectionView.layer.borderColor = UIColor.green.cgColor
+        artsCollectionView.layer.borderColor = UIColor.red.cgColor
         artsCollectionView.layer.borderWidth = 1.0
         calcCellSize()
     }
@@ -75,19 +77,24 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
         let screenSize = UIScreen.main.bounds.size
         let cellWidth = floor(screenSize.width * cellScale)
         let cellHeight = floor(screenSize.height * cellScale)
+
         let insetX = (view.bounds.width - cellWidth) / 2.0
         let insetY = (view.bounds.height - cellHeight) / 2.0
         
         let layout = artsCollectionView!.collectionViewLayout as! UICollectionViewFlowLayout
         
-        //layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
-//        artsCollectionView.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
-        artsCollectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+        artsCollectionView.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
+//        artsCollectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
+        let window = UIApplication.shared.windows[0]
+        let safeFrame = window.safeAreaLayoutGuide.layoutFrame
+        print(self.view.frame)
+        let topSafeAreaHeight = safeFrame.minY
+        // artsCollectionView.contentOffset = CGPoint(x: 0, y: -topSafeAreaHeight)
 //        // try to select the second one
 //        artsCollectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .centeredHorizontally, animated: false)
     }

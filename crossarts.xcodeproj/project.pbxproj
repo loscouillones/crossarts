@@ -22,6 +22,7 @@
 		377DD00A22C65057008D8077 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DD00922C65057008D8077 /* Category.swift */; };
 		377DD00C22C6515B008D8077 /* HomeArtCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DD00B22C6515B008D8077 /* HomeArtCollectionViewCell.swift */; };
 		E57C787422C806DD003AAA15 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57C787322C806DD003AAA15 /* Badge.swift */; };
+		37CC644F22CA15CB00056EFD /* ArtDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC644E22CA15CB00056EFD /* ArtDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		377DD00922C65057008D8077 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		377DD00B22C6515B008D8077 /* HomeArtCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeArtCollectionViewCell.swift; path = crossarts/Views/HomeArtCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		E57C787322C806DD003AAA15 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		37CC644E22CA15CB00056EFD /* ArtDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			children = (
 				377DCFCE22C61480008D8077 /* HomeViewController.swift */,
 				377DD00B22C6515B008D8077 /* HomeArtCollectionViewCell.swift */,
+				37CC644E22CA15CB00056EFD /* ArtDetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				E57C787422C806DD003AAA15 /* Badge.swift in Sources */,
 				377DD00622C63EFD008D8077 /* LoaderUIViewExtension.swift in Sources */,
 				377DD00A22C65057008D8077 /* Category.swift in Sources */,
+				37CC644F22CA15CB00056EFD /* ArtDetailViewController.swift in Sources */,
 				377DCFCF22C61480008D8077 /* HomeViewController.swift in Sources */,
 				377DD00822C64B20008D8077 /* Artwork.swift in Sources */,
 				377DCFCD22C61480008D8077 /* AppDelegate.swift in Sources */,

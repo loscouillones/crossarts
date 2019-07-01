@@ -10,12 +10,13 @@ import UIKit
 
 class HomeArtCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var homeUIView: UIView!
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var titleImageView: UIImageView!
-    @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var triviaTextField: UITextField!
+    @IBOutlet weak var homeImageView: UIImageView!
     
+    @IBOutlet weak var homeTextView: UITextView!
+    
+    @IBOutlet weak var homeTitleLabel: UILabel!
     var art: Artwork! {
         didSet {
             self.updateUI()
@@ -27,24 +28,24 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
         self.layer.borderWidth = 1.0
         
         if let art = art {
-            titleImageView.image = UIImage(named: "Joconde")
-            titleLabel.text = art.title
-            triviaTextField.text = art.trivia
+            homeImageView.image = UIImage(named: "Stones")
+            homeTextView.text = art.trivia
+            homeTitleLabel.text = art.title
         } else {
-            titleImageView.image = nil
-            titleLabel.text = nil
-            triviaTextField.text = nil
+            homeImageView.image = nil
+            homeTitleLabel.text = nil
+            homeTextView.text = nil
         }
         
         setBorders()
     }
     
     func setBorders() {
-        backView.layer.cornerRadius = 10.0
-        backView.layer.masksToBounds = true
-
-        titleImageView.layer.cornerRadius = 10.0
-        titleImageView.layer.masksToBounds = true
+        homeUIView.layer.cornerRadius = 18.0
+        homeUIView.layer.masksToBounds = true
+        
+        homeImageView.layer.cornerRadius = 18.0
+        homeImageView.layer.masksToBounds = true
     }
     
 }
