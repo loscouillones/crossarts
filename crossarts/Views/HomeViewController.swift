@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDataSource {
+class HomeViewController: UIViewController, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDelegate {
 
     var homeArts = [Artwork(id: 1,
                         landscapeUrl: "lanscape1",
@@ -58,6 +58,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
     
     func prepareCollectionView() {
         artsCollectionView.dataSource = self
+        artsCollectionView.delegate = self
     }
     
     override func viewDidLoad() {
@@ -110,5 +111,16 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
         cell.art = art
         
         return cell
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let layout = self.artsCollectionView?.collectionViewLayout as! UICollectionViewFlowLayout
+        let cellWidthWithPadding = layout.itemSize.width + layout.minimumLineSpacing
+        var offset = targetContentOffset.pointee
+        let index = (offset.x + scrollView.contentInset.left) / cellWidthWithPadding
+        let roundedIndex = round(index)
+        offset = CGPoint(x: roundedIndex * cellWidthWithPadding - scrollView.contentInset.left, y: scrollView.contentInset.top)
+        
+        targetContentOffset.pointee = offset
     }
 }

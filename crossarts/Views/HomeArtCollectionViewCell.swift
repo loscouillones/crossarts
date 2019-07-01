@@ -37,7 +37,8 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
             homeTextView.text = nil
         }
         
-        setBorders()
+        //setBorders()
+        setShadow()
     }
     
     func setBorders() {
@@ -46,6 +47,27 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
         
         homeImageView.layer.cornerRadius = 18.0
         homeImageView.layer.masksToBounds = true
+    }
+    
+    func setShadow() {
+        var shadowLayer: CAShapeLayer!
+        let cornerRadius: CGFloat = 18.0
+        let fillColor: UIColor = .white
+        
+        if shadowLayer == nil {
+            shadowLayer = CAShapeLayer()
+            
+            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
+            shadowLayer.fillColor = fillColor.cgColor
+            
+            shadowLayer.shadowColor = UIColor.black.cgColor
+            shadowLayer.shadowPath = shadowLayer.path
+            shadowLayer.shadowOffset = CGSize(width: -2.0, height: 2.0)
+            shadowLayer.shadowOpacity = 0.8
+            shadowLayer.shadowRadius = 2
+            
+            homeUIView.layer.insertSublayer(shadowLayer, at: 0)
+        }
     }
     
 }
