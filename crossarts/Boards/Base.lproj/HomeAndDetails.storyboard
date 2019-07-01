@@ -21,7 +21,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aZ7-ts-5c1">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="30" minimumInteritemSpacing="20" id="0I8-sB-Eyf">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="20" id="0I8-sB-Eyf">
                                     <size key="itemSize" width="416" height="725"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -42,7 +42,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Joconde" translatesAutoresizingMaskIntoConstraints="NO" id="mM6-9y-4pD" userLabel="Home Image">
-                                                    <rect key="frame" x="60" y="132" width="296" height="393"/>
+                                                    <rect key="frame" x="0.0" y="132" width="416" height="393"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Le saviez-vous ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KC-oM-zyQ">
                                                     <rect key="frame" x="60" y="565" width="296" height="21"/>
@@ -56,7 +56,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKb-OO-su5">
+                                                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKb-OO-su5">
                                                     <rect key="frame" x="60" y="132" width="296" height="393"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
@@ -73,8 +73,8 @@
                                             <constraint firstAttribute="trailing" secondItem="nTz-rV-NzH" secondAttribute="trailing" constant="60" id="PUB-jk-ffk"/>
                                             <constraint firstItem="9KC-oM-zyQ" firstAttribute="leading" secondItem="my7-x4-fhO" secondAttribute="leading" constant="60" id="RKX-Bs-tFc"/>
                                             <constraint firstItem="9KC-oM-zyQ" firstAttribute="top" secondItem="mM6-9y-4pD" secondAttribute="bottom" constant="40" id="WKT-Of-oYa"/>
-                                            <constraint firstItem="mM6-9y-4pD" firstAttribute="leading" secondItem="my7-x4-fhO" secondAttribute="leading" constant="60" id="YxG-VL-LJC"/>
-                                            <constraint firstAttribute="trailing" secondItem="mM6-9y-4pD" secondAttribute="trailing" constant="60" id="hXP-Pi-yl7"/>
+                                            <constraint firstItem="mM6-9y-4pD" firstAttribute="leading" secondItem="my7-x4-fhO" secondAttribute="leading" id="YxG-VL-LJC"/>
+                                            <constraint firstAttribute="trailing" secondItem="mM6-9y-4pD" secondAttribute="trailing" id="hXP-Pi-yl7"/>
                                             <constraint firstAttribute="trailing" secondItem="vJn-6d-DpM" secondAttribute="trailing" constant="20" id="jcW-5k-Oem"/>
                                             <constraint firstItem="vJn-6d-DpM" firstAttribute="top" secondItem="my7-x4-fhO" secondAttribute="top" constant="20" id="tse-qd-4hC"/>
                                             <constraint firstAttribute="bottom" secondItem="mM6-9y-4pD" secondAttribute="bottom" constant="200" id="ujx-qj-Zcy"/>

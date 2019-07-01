@@ -23,8 +23,8 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
     }
     
     func updateUI() {
-//        self.layer.borderColor = UIColor.blue.cgColor
-//        self.layer.borderWidth = 1.0
+        self.layer.borderColor = UIColor.blue.cgColor
+        self.layer.borderWidth = 1.0
         
         if let art = art {
             titleImageView.image = UIImage(named: "Joconde")

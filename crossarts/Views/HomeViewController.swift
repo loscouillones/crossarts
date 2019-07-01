@@ -43,8 +43,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
                             categoryId: 2,
                             tags: [],
                             date: Date())]
-//        Art(image: #imageLiteral(resourceName: "joconde"), title: "La Joconde", trivia: "Blablahblah"),
-//        Art(image: #imageLiteral(resourceName: "herbe"), title: "Yo man!", trivia: "Blablahblah 99")]
+
+    let cellScale: CGFloat = 1.0
     
     @IBOutlet weak var artsCollectionView: UICollectionView!
     
@@ -65,13 +65,31 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
         // Do any additional setup after loading the view.
         testLoader()
         prepareCollectionView()
+        // debug
+        artsCollectionView.layer.borderColor = UIColor.green.cgColor
+        artsCollectionView.layer.borderWidth = 1.0
+        calcCellSize()
+    }
+    
+    func calcCellSize() {
+        let screenSize = UIScreen.main.bounds.size
+        let cellWidth = floor(screenSize.width * cellScale)
+        let cellHeight = floor(screenSize.height * cellScale)
+        let insetX = (view.bounds.width - cellWidth) / 2.0
+        let insetY = (view.bounds.height - cellHeight) / 2.0
+        
+        let layout = artsCollectionView!.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        //layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+//        artsCollectionView.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
+        artsCollectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        // try to select the second one
-        artsCollectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .centeredHorizontally, animated: false)
+//        // try to select the second one
+//        artsCollectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .centeredHorizontally, animated: false)
     }
     
     // MARK: - UICollectionViewDataSource
