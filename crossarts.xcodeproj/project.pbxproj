@@ -28,6 +28,8 @@
 		37FE82F322CB5B870018EE50 /* ImageViewDropShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE82F222CB5B870018EE50 /* ImageViewDropShadowExtension.swift */; };
 		B38EF0D322CC0B53004D3B33 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38EF0D222CC0B53004D3B33 /* User.swift */; };
 		CDB9B5B63103E7250E7A5BC8 /* Pods_crossarts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDF1D493B24D017C5D6C32 /* Pods_crossarts.framework */; };
+		767C259922CA3F3A005DFE14 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767C259822CA3F3A005DFE14 /* Favorite.swift */; };
+		767C259C22CA4C05005DFE14 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767C259B22CA4C05005DFE14 /* FavoritesViewController.swift */; };
 		E57C787422C806DD003AAA15 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57C787322C806DD003AAA15 /* Badge.swift */; };
 		ED2EAF6E5D735998F7B0B4ED /* Pods_crossartsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126D91F424830FD8DE52088C /* Pods_crossartsTests.framework */; };
 		FCC73C75BBC257BDCEB93CFA /* Pods_crossartsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B197F6BC7A89657B0B9CEA9 /* Pods_crossartsUITests.framework */; };
@@ -85,6 +87,8 @@
 		8EF1628128D07EFEC8EB055E /* Pods-crossartsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crossartsTests.release.xcconfig"; path = "Target Support Files/Pods-crossartsTests/Pods-crossartsTests.release.xcconfig"; sourceTree = "<group>"; };
 		976516FFC61DED7001D843DD /* Pods-crossartsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crossartsTests.debug.xcconfig"; path = "Target Support Files/Pods-crossartsTests/Pods-crossartsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B38EF0D222CC0B53004D3B33 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		767C259822CA3F3A005DFE14 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		767C259B22CA4C05005DFE14 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		E57C787322C806DD003AAA15 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		E999A6F99E5350797A2814A8 /* Pods-crossartsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crossartsUITests.release.xcconfig"; path = "Target Support Files/Pods-crossartsUITests/Pods-crossartsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				377DD00722C64B20008D8077 /* Artwork.swift */,
+				767C259822CA3F3A005DFE14 /* Favorite.swift */,
 				E57C787322C806DD003AAA15 /* Badge.swift */,
 				377DD00922C65057008D8077 /* Category.swift */,
 			);
@@ -209,6 +214,7 @@
 			children = (
 				3757AAA322CB95FA0033C481 /* AboutViewController.swift */,
 				377DCFCE22C61480008D8077 /* HomeViewController.swift */,
+				767C259B22CA4C05005DFE14 /* FavoritesViewController.swift */,
 				377DD00B22C6515B008D8077 /* HomeArtCollectionViewCell.swift */,
 				37CC644E22CA15CB00056EFD /* ArtDetailViewController.swift */,
 			);
@@ -490,6 +496,7 @@
 			files = (
 				E57C787422C806DD003AAA15 /* Badge.swift in Sources */,
 				B38EF0D322CC0B53004D3B33 /* User.swift in Sources */,
+				767C259C22CA4C05005DFE14 /* FavoritesViewController.swift in Sources */,
 				377DD00622C63EFD008D8077 /* LoaderUIViewExtension.swift in Sources */,
 				37FE82F322CB5B870018EE50 /* ImageViewDropShadowExtension.swift in Sources */,
 				372247F022CB9D1000562FFB /* LikeButton.swift in Sources */,
@@ -497,6 +504,7 @@
 				37CC644F22CA15CB00056EFD /* ArtDetailViewController.swift in Sources */,
 				377DCFCF22C61480008D8077 /* HomeViewController.swift in Sources */,
 				377DD00822C64B20008D8077 /* Artwork.swift in Sources */,
+				767C259922CA3F3A005DFE14 /* Favorite.swift in Sources */,
 				377DCFCD22C61480008D8077 /* AppDelegate.swift in Sources */,
 				3757AAA422CB95FA0033C481 /* AboutViewController.swift in Sources */,
 				377DD00C22C6515B008D8077 /* HomeArtCollectionViewCell.swift in Sources */,
