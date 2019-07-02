@@ -64,12 +64,13 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
         title = "Home"
         // navigationItem.title = "navItem"
         testLoader()
         prepareCollectionView()
         // debug
+        
 //        artsCollectionView.layer.borderColor = UIColor.red.cgColor
 //        artsCollectionView.layer.borderWidth = 1.0
         calcCellSize()
@@ -87,23 +88,31 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
         
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         artsCollectionView.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
-//        artsCollectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-//        let window = UIApplication.shared.windows[0]
-//        let safeFrame = window.safeAreaLayoutGuide.layoutFrame
 
-        // artsCollectionView.contentOffset = CGPoint(x: 0, y: -topSafeAreaHeight)
-//        // try to select the second one
         setSelected(1, true)
     }
     
     func setSelected(_ index: Int, _ scrollToItem: Bool = false) {
         selectedCell = index
+        
+        // change opacity of all cells
+        for i in 0..<homeArts.count {
+            if let cell = artsCollectionView.cellForItem(at: IndexPath(item: i, section: 0)) as? HomeArtCollectionViewCell {
+                let targetOpacity = selectedCell == i ? 1.0 : 0.2
+                UIView.animate(withDuration: 0.3, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
+                    cell.layer.opacity = Float(targetOpacity)
+                })
+            }
+        }
+        
+        // if needed scroll to specified cell
         if scrollToItem {
-            artsCollectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .centeredHorizontally, animated: false)
+            let indexPath = IndexPath(item: index, section: 0)
+            artsCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
         }
     }
     
@@ -117,8 +126,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
         let art = homeArts[indexPath.item]
         cell.art = art
 
-        if indexPath.row != 1 {
-            cell.layer.opacity = 0.1
+        if (selectedCell > -1) {
+            cell.layer.opacity = selectedCell == indexPath.row ? 1 : 0.2
         }
         
         return cell
