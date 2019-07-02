@@ -9,7 +9,8 @@
 import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDelegate {
-
+    var selectedCell = -1
+    
     var homeArts = [Artwork(id: 1,
                         landscapeUrl: "lanscape1",
                         portraitUrl: "portrait1",
@@ -91,12 +92,19 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        let window = UIApplication.shared.windows[0]
-        let safeFrame = window.safeAreaLayoutGuide.layoutFrame
+//        let window = UIApplication.shared.windows[0]
+//        let safeFrame = window.safeAreaLayoutGuide.layoutFrame
 
         // artsCollectionView.contentOffset = CGPoint(x: 0, y: -topSafeAreaHeight)
 //        // try to select the second one
-//        artsCollectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .centeredHorizontally, animated: false)
+        setSelected(1, true)
+    }
+    
+    func setSelected(_ index: Int, _ scrollToItem: Bool = false) {
+        selectedCell = index
+        if scrollToItem {
+            artsCollectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .centeredHorizontally, animated: false)
+        }
     }
     
     // MARK: - UICollectionViewDataSource
@@ -108,6 +116,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeArtCollectionViewCell", for: indexPath) as! HomeArtCollectionViewCell
         let art = homeArts[indexPath.item]
         cell.art = art
+
+        if indexPath.row != 1 {
+            cell.layer.opacity = 0.1
+        }
         
         return cell
     }
@@ -121,5 +133,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
         offset = CGPoint(x: roundedIndex * cellWidthWithPadding - scrollView.contentInset.left, y: scrollView.contentInset.top)
         
         targetContentOffset.pointee = offset
+        
+        setSelected(Int(roundedIndex))
     }
 }
