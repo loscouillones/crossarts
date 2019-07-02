@@ -47,11 +47,20 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
                             date: Date())]
 
     let cellScale: CGFloat = 0.8
+   // let FLICKR_URL = "https://www.souljax.com/crossarts/artworks.json"
+
+    // var homeArts : [Artwork] = []
     
     @IBOutlet weak var artsCollectionView: UICollectionView!
     
     func testLoader() {
         showLoader()
+
+//
+        jsonLoader()
+        
+        
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             // Code you want to be delayed
             self.hideLoader()
@@ -63,6 +72,43 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
         // loadData
         hideLoader()
     }
+
+   /* let decoder = JSONDecoder()
+    decoder.keyDecodingStrategy = .convertFromSnakeCase
+    decoder.dateDecodingStrategy = .secondsSince1970
+    //let launch = try decoder.decode(Launch.self, from: jsonData)
+    */
+    
+    func jsonLoader() {
+        
+     
+        print("\t JSONLOADER")
+
+        guard let path = Bundle.main.path(forResource: "artworks", ofType: "json") else { return }
+        
+        let url = URL(fileURLWithPath: path)
+        print("url = [\(url)]")
+        
+        do {
+            let data = try Data(contentsOf: url)
+            print(data)
+            
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+        
+            let result = try
+                decoder.decode(JsonResponse.self, from: data)
+            
+            print(result)
+            
+        } catch  {
+            print("!!!! JSONloader - error : \n \(error)")
+
+        }
+        
+        
+        }
+    
     
     func prepareCollectionView() {
         artsCollectionView.dataSource = self
@@ -75,6 +121,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
         title = "Arts"
         // navigationItem.title = "navItem"
         loadHomeData()
+        // Do any additional setup after loading the view.
+        // **testLoader()
+        
         prepareCollectionView()
         
 //        artsCollectionView.layer.borderColor = UIColor.red.cgColor

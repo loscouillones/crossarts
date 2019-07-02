@@ -1,0 +1,28 @@
+{
+    "artworks": [
+        {
+            "id": 1,
+            "landscapeUrl": "landscape1",
+            "portraitUrl": "portrait1",
+            "description": "desc1",
+            "title": "title1",
+            "trivia": "triva1",
+            "related": [3, 5,8],
+            "categoryId": 1,
+            "tags": ["tag1","tag2"],
+            "date": "2019-07-02T09:33:301Z"
+        },
+        {
+            "id": 2,
+            "landscapeUrl": "landscape2",
+            "portraitUrl": "portrait2",
+            "description": "desc2",
+            "title": "title2",
+            "trivia": "triva2",
+            "related": [3,5,8],
+            "categoryId": 1,
+            "tags": ["tag1","tag2"],
+            "date": "2019-06-01T09:33:301Z"
+        }
+    ]
+}
