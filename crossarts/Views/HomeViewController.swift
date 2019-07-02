@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: UIViewController, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDelegate {
     var selectedCell = -1
     var previousSelectedCell = -1
-    
+    let jasonURL = "https://www.souljax.com/crossarts/artworks.json"
     var homeArts = [Artwork(id: 1,
                         landscapeUrl: "lanscape1",
                         portraitUrl: "portrait1",
@@ -51,12 +51,63 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
 
     // var homeArts : [Artwork] = []
     
+    
+    /////////REQUEST/////////
+    func sendRequest(toUrl requestUrl: String) {
+        // 1. Il nous faut créer une session
+        // URLSession.shared est une session déjà créé qui ne nécessite pas de configuration
+        let session = URLSession.shared
+        session.configuration.timeoutIntervalForRequest = 3
+        
+        // 2. Création d'une instance d'URL
+        let url = URL(string: requestUrl)!
+        
+        // 3. Création d'une task utilisant cette session pour appeler l'URL demandée
+        let task = session.dataTask(with: url,
+                                    completionHandler: { data, response, error in
+                                        
+                                        if error != nil {
+                                            print("Error during request: \(error)")
+                                            return
+                                        }
+                                        
+                                        // On verifie que la réponse est dans les 2xx (pas d'erreur)
+                                        guard let httpResponse = response as? HTTPURLResponse,
+                                            (200...299).contains(httpResponse.statusCode) else {
+                                                if let httpResponse = response as? HTTPURLResponse {
+                                                    print("Error calling \(self.jasonURL), error code: \(httpResponse.statusCode)")
+                                                } else {
+                                                    print("Error calling \(self.jasonURL), no error code")
+                                                }
+                                                
+                                                return
+                                        }
+                                        
+                                        // Vérification du mimetype (optionnel)
+                                        guard let mime = response?.mimeType, mime == "application/json" else {
+                                            print("Wrong MIME type!")
+                                            return
+                                        }
+                                        
+                                        // Enfin: décodage de la réponse
+                                        let text = String(data: data!, encoding: String.Encoding.utf8)
+                                        print("result REQUEST: \n\n")
+                                        print(text)
+        })
+        
+        // Ici la requête a juste était préparée, mais pas envoyée
+        // Cet appel permet de lancer la tâche
+        task.resume()
+        
+    }
+    /////////AND-REQUEST/////////
+    
     @IBOutlet weak var artsCollectionView: UICollectionView!
     
     func testLoader() {
         showLoader()
-
-//
+        
+        //
         jsonLoader()
         
         
@@ -81,9 +132,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     
     func jsonLoader() {
         
-     
+        
         print("\t JSONLOADER")
-
+        
         guard let path = Bundle.main.path(forResource: "artworks", ofType: "json") else { return }
         
         let url = URL(fileURLWithPath: path)
@@ -91,23 +142,28 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
         
         do {
             let data = try Data(contentsOf: url)
-            print(data)
+            //print(data)
             
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
-        
+            
             let result = try
                 decoder.decode(JsonResponse.self, from: data)
             
-            print(result)
+            //print(result)
+            
+            homeArts = result.artworks
+            
+            // print(homeArts)
+            
             
         } catch  {
             print("!!!! JSONloader - error : \n \(error)")
-
+            
         }
         
         
-        }
+    }
     
     
     func prepareCollectionView() {
