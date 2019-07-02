@@ -8,8 +8,10 @@
 import UIKit
 import Foundation
 
-class FavoritesViewController: UIViewController, UITableViewDataSource {
+class FavoritesViewController: UITableViewController {
 
+    @IBOutlet var favoritesTableView: UITableView!
+    
     var favorites = [1, 2, 3]
     
     var artworks = [Artwork(id: 1,
@@ -46,18 +48,24 @@ class FavoritesViewController: UIViewController, UITableViewDataSource {
                             tags: [],
                             date: Date())]
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return favorites.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesListViewCell", for: indexPath) as! FavoritesListViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesListViewCell2", for: indexPath) as! FavoritesListViewCell
         let favID = favorites[indexPath.item]
         let artwork = artworks.first(where: { $0.id == favID } )
 
         cell.artwork = artwork
         
         return cell
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        favoritesTableView.dataSource = self
+        self.tableView.rowHeight = 130.0
     }
     
 }
