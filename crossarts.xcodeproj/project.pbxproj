@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		372247F022CB9D1000562FFB /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372247EF22CB9D1000562FFB /* LikeButton.swift */; };
-		3757AAA222CB95A10033C481 /* like-anim.json in Resources */ = {isa = PBXBuildFile; fileRef = 3757AAA122CB95A10033C481 /* like-anim.json */; };
+		372247F222CBB4F100562FFB /* like-anim.json in Resources */ = {isa = PBXBuildFile; fileRef = 372247F122CBB4F100562FFB /* like-anim.json */; };
 		3757AAA422CB95FA0033C481 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757AAA322CB95FA0033C481 /* AboutViewController.swift */; };
 		377DCFCD22C61480008D8077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DCFCC22C61480008D8077 /* AppDelegate.swift */; };
 		377DCFCF22C61480008D8077 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DCFCE22C61480008D8077 /* HomeViewController.swift */; };
@@ -55,7 +55,7 @@
 		21EDDB08BC56B532AFCE5E16 /* Pods-crossartsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crossartsUITests.debug.xcconfig"; path = "Target Support Files/Pods-crossartsUITests/Pods-crossartsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		257068066DDF98B19B2CAA2C /* Pods-crossarts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crossarts.debug.xcconfig"; path = "Target Support Files/Pods-crossarts/Pods-crossarts.debug.xcconfig"; sourceTree = "<group>"; };
 		372247EF22CB9D1000562FFB /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
-		3757AAA122CB95A10033C481 /* like-anim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "like-anim.json"; path = "../../../Downloads/like-anim.json"; sourceTree = "<group>"; };
+		372247F122CBB4F100562FFB /* like-anim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "like-anim.json"; sourceTree = "<group>"; };
 		3757AAA322CB95FA0033C481 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		377DCFC922C61480008D8077 /* crossarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = crossarts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		377DCFCC22C61480008D8077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 		377DCFCB22C61480008D8077 /* crossarts */ = {
 			isa = PBXGroup;
 			children = (
-				3757AAA122CB95A10033C481 /* like-anim.json */,
+				372247F122CBB4F100562FFB /* like-anim.json */,
 				372247EE22CB9CFE00562FFB /* Components */,
 				377DD00422C63EDE008D8077 /* Extensions */,
 				377DCFFE22C615AA008D8077 /* Boards */,
@@ -361,7 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				377DCFD722C61482008D8077 /* LaunchScreen.storyboard in Resources */,
-				3757AAA222CB95A10033C481 /* like-anim.json in Resources */,
+				372247F222CBB4F100562FFB /* like-anim.json in Resources */,
 				377DCFFD22C6159B008D8077 /* Badges.storyboard in Resources */,
 				377DD00322C63A5A008D8077 /* About.storyboard in Resources */,
 				377DCFD422C61482008D8077 /* Assets.xcassets in Resources */,
