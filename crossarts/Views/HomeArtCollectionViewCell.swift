@@ -17,6 +17,9 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var homeTextView: UITextView!
     
     @IBOutlet weak var homeTitleLabel: UILabel!
+    
+    @IBOutlet weak var likeButton: LikeButton!
+    
     var art: Artwork! {
         didSet {
             self.updateUI()
@@ -47,6 +50,14 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
         
         homeImageView.layer.cornerRadius = 18.0
         homeImageView.layer.masksToBounds = true
+    }
+    
+    @IBAction func onLikeTap(_ sender: Any) {
+        print("Click on like for artwork: \(art.id)")
+        likeButton.isLiked = !likeButton.isLiked
+        if likeButton.isLiked {
+            likeButton.doLike()
+        }
     }
     
     func setShadow() {

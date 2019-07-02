@@ -50,15 +50,22 @@ class LikeButton: UIButton {
     
     func prepareAnimation() {
         // Do any additional setup after loading the view
-        self.layer.borderColor = UIColor.red.cgColor
-        self.layer.borderWidth = 2.0
-
-        animationView.center = self.center
-        let width = self.frame.width
-        let height = self.frame.height
-        animationView.frame = CGRect(x: -width/2, y: -height/2, width: 300, height: 300)
-
+//        self.layer.borderColor = UIColor.red.cgColor
+//        self.layer.borderWidth = 2.0
+//
+//        animationView.layer.borderColor = UIColor.blue.cgColor
+//        animationView.layer.borderWidth = 10.0
+        
+        // force the width/height to 200: the animation doesn't seem to scale properly
+        // no idea why
+        animationView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+        
+        // then center the animation inside the button
+        animationView.center = CGPoint(x: self.layer.frame.width / 2, y: self.layer.frame.height / 2)
         animationView.contentMode = .scaleAspectFill
+       
+        // let taps bubble up to the button
+        animationView.isUserInteractionEnabled = false
         
         self.addSubview(animationView)
         
@@ -69,12 +76,9 @@ class LikeButton: UIButton {
         animationView.play(fromProgress: 0, toProgress: 1)
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
+        
         self.prepareAnimation()
     }
 }

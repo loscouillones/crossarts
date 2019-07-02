@@ -103,7 +103,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
         for i in 0..<homeArts.count {
             if let cell = artsCollectionView.cellForItem(at: IndexPath(item: i, section: 0)) as? HomeArtCollectionViewCell {
                 let targetOpacity = selectedCell == i ? 1.0 : 0.2
-                UIView.animate(withDuration: 0.3, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
+                UIView.animate(withDuration: selectedCell == i ? 0.3 : 0.8, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
                     cell.layer.opacity = Float(targetOpacity)
                 })
             }
