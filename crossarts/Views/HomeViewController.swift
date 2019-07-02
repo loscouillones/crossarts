@@ -145,4 +145,20 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
         
         setSelected(Int(roundedIndex))
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // check that clicked item is the selected one: if it is, call the details controller
+        if indexPath.row == selectedCell {
+            print("Need to open details for the selected cell")
+            pushNextViewController()
+        }
+    }
+    
+    func pushNextViewController() {
+        // find a way to push this to the viewcontroller ?
+        let artworkId = homeArts[selectedCell]
+//        let viewController = ArtDetailViewController(nibName: "ArtDetailViewController", bundle: nil)
+//        self.navigationController?.pushViewController(viewController, animated: true)
+        performSegue(withIdentifier: "artDetail", sender: nil)
+    }
 }

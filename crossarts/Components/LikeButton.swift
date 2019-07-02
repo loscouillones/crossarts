@@ -69,7 +69,7 @@ class LikeButton: UIButton {
         
         self.addSubview(animationView)
         
-        animationView.play(fromProgress: 1, toProgress: 1)
+        animationView.play(fromProgress: 0, toProgress: 0)
     }
     
     func doLike() {
