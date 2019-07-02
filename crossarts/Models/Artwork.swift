@@ -12,6 +12,7 @@ struct Artwork {
     let id: Int
     let landscapeUrl: String
     let portraitUrl: String
+    let thumbUrl: String
     let description: String
     let title: String
     let trivia: String
