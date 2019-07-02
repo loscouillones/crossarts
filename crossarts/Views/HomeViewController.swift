@@ -67,7 +67,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
 
         title = "Home"
         // navigationItem.title = "navItem"
-        testLoader()
+        // testLoader()
         prepareCollectionView()
         // debug
         

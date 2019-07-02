@@ -13,19 +13,52 @@
         <!--About-->
         <scene sceneID="q52-gB-6s6">
             <objects>
-                <viewController storyboardIdentifier="About" id="gnT-PA-Btg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="About" id="gnT-PA-Btg" customClass="AboutViewController" customModule="crossarts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NkW-nK-XK7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdD-ea-zVh">
+                                <rect key="frame" x="192" y="330" width="66" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Like"/>
+                                <connections>
+                                    <action selector="onLike:" destination="gnT-PA-Btg" eventType="touchUpInside" id="mED-y8-1Sb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqE-H2-AWw">
+                                <rect key="frame" x="281" y="330" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Unlike"/>
+                                <connections>
+                                    <action selector="onUnLike:" destination="gnT-PA-Btg" eventType="touchUpInside" id="2Pg-Ro-1LM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDd-2e-XVw" customClass="LikeButton" customModule="crossarts" customModuleProvider="target">
+                                <rect key="frame" x="202" y="394" width="122" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fza-1z-xR5">
+                                <rect key="frame" x="133" y="100" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.48142974500000002" blue="0.087728947010000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wlE-zV-PDp"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" id="dlz-x8-9pM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="likeButton" destination="EDd-2e-XVw" id="GhF-hL-2og"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boO-aj-JFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159" y="129"/>
+            <point key="canvasLocation" x="155.07246376811597" y="128.57142857142856"/>
         </scene>
     </scenes>
 </document>
