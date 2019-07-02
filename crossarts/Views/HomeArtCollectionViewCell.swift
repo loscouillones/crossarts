@@ -24,8 +24,8 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
     }
     
     func updateUI() {
-        self.layer.borderColor = UIColor.blue.cgColor
-        self.layer.borderWidth = 1.0
+//        self.layer.borderColor = UIColor.blue.cgColor
+//        self.layer.borderWidth = 1.0
         
         if let art = art {
             homeImageView.image = UIImage(named: "Stones")
@@ -37,8 +37,8 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
             homeTextView.text = nil
         }
         
-        //setBorders()
-        setShadow()
+        setBorders()
+        // setShadow()
     }
     
     func setBorders() {
@@ -50,24 +50,25 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
     }
     
     func setShadow() {
-        var shadowLayer: CAShapeLayer!
-        let cornerRadius: CGFloat = 18.0
-        let fillColor: UIColor = .white
-        
-        if shadowLayer == nil {
-            shadowLayer = CAShapeLayer()
-            
-            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
-            shadowLayer.fillColor = fillColor.cgColor
-            
-            shadowLayer.shadowColor = UIColor.black.cgColor
-            shadowLayer.shadowPath = shadowLayer.path
-            shadowLayer.shadowOffset = CGSize(width: -2.0, height: 2.0)
-            shadowLayer.shadowOpacity = 0.8
-            shadowLayer.shadowRadius = 2
-            
-            homeUIView.layer.insertSublayer(shadowLayer, at: 0)
-        }
+        // homeImageView.dropShadow()
+//        var shadowLayer: CAShapeLayer!
+//        let cornerRadius: CGFloat = 18.0
+//        let fillColor: UIColor = .white
+//
+//        if shadowLayer == nil {
+//            shadowLayer = CAShapeLayer()
+//
+//            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
+//            shadowLayer.fillColor = fillColor.cgColor
+//
+//            shadowLayer.shadowColor = UIColor.black.cgColor
+//            shadowLayer.shadowPath = shadowLayer.path
+//            shadowLayer.shadowOffset = CGSize(width: -2.0, height: 2.0)
+//            shadowLayer.shadowOpacity = 0.8
+//            shadowLayer.shadowRadius = 2
+//
+//            homeUIView.layer.insertSublayer(shadowLayer, at: 0)
+//        }
     }
     
 }

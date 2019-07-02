@@ -69,8 +69,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
         testLoader()
         prepareCollectionView()
         // debug
-        artsCollectionView.layer.borderColor = UIColor.red.cgColor
-        artsCollectionView.layer.borderWidth = 1.0
+//        artsCollectionView.layer.borderColor = UIColor.red.cgColor
+//        artsCollectionView.layer.borderWidth = 1.0
         calcCellSize()
     }
     
@@ -93,8 +93,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
         super.viewDidLayoutSubviews()
         let window = UIApplication.shared.windows[0]
         let safeFrame = window.safeAreaLayoutGuide.layoutFrame
-        print(self.view.frame)
-        let topSafeAreaHeight = safeFrame.minY
+
         // artsCollectionView.contentOffset = CGPoint(x: 0, y: -topSafeAreaHeight)
 //        // try to select the second one
 //        artsCollectionView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .centeredHorizontally, animated: false)
