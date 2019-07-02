@@ -10,27 +10,52 @@ import Foundation
 
 class FavoritesViewController: UIViewController, UITableViewDataSource {
 
+    var favorites = [1, 2, 3]
     
-    var favorites = [
-        Favorite(
-            favoriteID: 01
-                    ),
-        Favorite(
-            favoriteID: 02
-                    ),
-        Favorite(
-            favoriteID: 03
-        )]
-    
+    var artworks = [Artwork(id: 1,
+                            landscapeUrl: "lanscape1",
+                            portraitUrl: "portrait1",
+                            thumbUrl: "apple",
+                            description: "desc1",
+                            title: "title1",
+                            trivia: "trivia1",
+                            related: [],
+                            categoryId: 1,
+                            tags: [],
+                            date: Date()),
+                    Artwork(id: 2,
+                            landscapeUrl: "lanscape2",
+                            portraitUrl: "portrait2",
+                            thumbUrl: "apple2",
+                            description: "desc2",
+                            title: "title2",
+                            trivia: "trivia2",
+                            related: [],
+                            categoryId: 2,
+                            tags: [],
+                            date: Date()),
+                    Artwork(id: 3,
+                            landscapeUrl: "lanscape3",
+                            portraitUrl: "portrait3",
+                            thumbUrl: "apple3",
+                            description: "desc3",
+                            title: "title3",
+                            trivia: "trivia3",
+                            related: [],
+                            categoryId: 2,
+                            tags: [],
+                            date: Date())]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return favorites.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withReuseIdentifier: "FavoritesListViewCell", for: indexPath) as! FavoritesListViewCell
-        let fav = favorites[indexPath.item]
-        cell.fav = fav
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesListViewCell", for: indexPath) as! FavoritesListViewCell
+        let favID = favorites[indexPath.item]
+        let artwork = artworks.first(where: { $0.id == favID } )
+
+        cell.artwork = artwork
         
         return cell
     }

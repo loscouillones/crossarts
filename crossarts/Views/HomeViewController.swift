@@ -8,9 +8,13 @@
 
 import UIKit
 
+<<<<<<< HEAD
 class HomeViewController: UIViewController, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDelegate {
     var selectedCell = -1
     var previousSelectedCell = -1
+=======
+class HomeViewController: UIViewController, UICollectionViewDataSource {
+>>>>>>> features-favorites-controller-and-cell
     
     var homeArts = [Artwork(id: 1,
                         landscapeUrl: "lanscape1",
