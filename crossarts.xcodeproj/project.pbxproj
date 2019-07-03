@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		372247F022CB9D1000562FFB /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372247EF22CB9D1000562FFB /* LikeButton.swift */; };
 		372247F222CBB4F100562FFB /* like-anim.json in Resources */ = {isa = PBXBuildFile; fileRef = 372247F122CBB4F100562FFB /* like-anim.json */; };
+		3756264422CCD34D005CE807 /* ImageViewLoadURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3756264322CCD34D005CE807 /* ImageViewLoadURL.swift */; };
 		3757AAA422CB95FA0033C481 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3757AAA322CB95FA0033C481 /* AboutViewController.swift */; };
+		3390136F22CA44840041E4E1 /* artworks.json in Resources */ = {isa = PBXBuildFile; fileRef = 3390136E22CA44840041E4E1 /* artworks.json */; };
 		377DCFCD22C61480008D8077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DCFCC22C61480008D8077 /* AppDelegate.swift */; };
 		377DCFCF22C61480008D8077 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DCFCE22C61480008D8077 /* HomeViewController.swift */; };
 		377DCFD222C61480008D8077 /* HomeAndDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377DCFD022C61480008D8077 /* HomeAndDetails.storyboard */; };
@@ -71,7 +73,9 @@
 		257068066DDF98B19B2CAA2C /* Pods-crossarts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crossarts.debug.xcconfig"; path = "Target Support Files/Pods-crossarts/Pods-crossarts.debug.xcconfig"; sourceTree = "<group>"; };
 		372247EF22CB9D1000562FFB /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		372247F122CBB4F100562FFB /* like-anim.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "like-anim.json"; sourceTree = "<group>"; };
+		3756264322CCD34D005CE807 /* ImageViewLoadURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewLoadURL.swift; sourceTree = "<group>"; };
 		3757AAA322CB95FA0033C481 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		3390136E22CA44840041E4E1 /* artworks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = artworks.json; sourceTree = "<group>"; };
 		377DCFC922C61480008D8077 /* crossarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = crossarts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		377DCFCC22C61480008D8077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		377DCFCE22C61480008D8077 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 		377DCFC022C61480008D8077 = {
 			isa = PBXGroup;
 			children = (
+				3390136E22CA44840041E4E1 /* artworks.json */,
 				377DCFCB22C61480008D8077 /* crossarts */,
 				377DCFE022C61482008D8077 /* crossartsTests */,
 				377DCFEB22C61482008D8077 /* crossartsUITests */,
@@ -260,6 +265,7 @@
 			children = (
 				377DD00522C63EFD008D8077 /* LoaderUIViewExtension.swift */,
 				37FE82F222CB5B870018EE50 /* ImageViewDropShadowExtension.swift */,
+				3756264322CCD34D005CE807 /* ImageViewLoadURL.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -438,6 +444,7 @@
 				76741DAA22CCE21200809BB6 /* Lato-Italic.ttf in Resources */,
 				76741DAF22CCE21200809BB6 /* Lato-Regular.ttf in Resources */,
 				76741DAB22CCE21200809BB6 /* Lato-LightItalic.ttf in Resources */,
+				3390136F22CA44840041E4E1 /* artworks.json in Resources */,
 				377DCFD222C61480008D8077 /* HomeAndDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,6 +563,7 @@
 				377DD00622C63EFD008D8077 /* LoaderUIViewExtension.swift in Sources */,
 				37FE82F322CB5B870018EE50 /* ImageViewDropShadowExtension.swift in Sources */,
 				372247F022CB9D1000562FFB /* LikeButton.swift in Sources */,
+				3756264422CCD34D005CE807 /* ImageViewLoadURL.swift in Sources */,
 				377DD00A22C65057008D8077 /* Category.swift in Sources */,
 				37CC644F22CA15CB00056EFD /* ArtDetailViewController.swift in Sources */,
 				767C25A022CB5B9B005DFE14 /* Favorite.swift in Sources */,

@@ -12,53 +12,161 @@ import UIKit
 class HomeViewController: UIViewController, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDelegate {
     var selectedCell = -1
     var previousSelectedCell = -1
-
-    
-    var homeArts = [Artwork(id: 1,
-                        landscapeUrl: "lanscape1",
-                        portraitUrl: "portrait1",
-                        thumbUrl: "thumb1",
-                        description: "desc1",
-                        title: "title1",
-                        trivia: "trivia1",
-                        related: [],
-                        categoryId: 1,
-                        tags: [],
-                        date: Date()),
-                    Artwork(id: 2,
-                            landscapeUrl: "lanscape2",
-                            portraitUrl: "portrait2",
-                            thumbUrl: "thumb2",
-                            description: "desc2",
-                            title: "title2",
-                            trivia: "trivia2",
-                            related: [],
-                            categoryId: 2,
-                            tags: [],
-                            date: Date()),
-                    Artwork(id: 3,
-                            landscapeUrl: "lanscape3",
-                            portraitUrl: "portrait3",
-                            thumbUrl: "thumb3",
-                            description: "desc3",
-                            title: "title3",
-                            trivia: "trivia3",
-                            related: [],
-                            categoryId: 2,
-                            tags: [],
-                            date: Date())]
+    let jasonURL = "https://www.souljax.com/crossarts/artworks.json"
+//    var homeArts = [Artwork(id: 1,
+//                        landscapeUrl: "lanscape1",
+//                        portraitUrl: "portrait1",
+//                        thumbUrl: "thumb1",
+//                        description: "desc1",
+//                        title: "title1",
+//                        trivia: "trivia1",
+//                        related: [],
+//                        categoryId: 1,
+//                        tags: [],
+//                        date: Date()),
+//                    Artwork(id: 2,
+//                            landscapeUrl: "lanscape2",
+//                            portraitUrl: "portrait2",
+//                            thumbUrl: "thumb2",
+//                            description: "desc2",
+//                            title: "title2",
+//                            trivia: "trivia2",
+//                            related: [],
+//                            categoryId: 2,
+//                            tags: [],
+//                            date: Date()),
+//                    Artwork(id: 3,
+//                            landscapeUrl: "lanscape3",
+//                            portraitUrl: "portrait3",
+//                            thumbUrl: "thumb3",
+//                            description: "desc3",
+//                            title: "title3",
+//                            trivia: "trivia3",
+//                            related: [],
+//                            categoryId: 2,
+//                            tags: [],
+//                            date: Date())]
 
     let cellScale: CGFloat = 0.8
+   // let FLICKR_URL = "https://www.souljax.com/crossarts/artworks.json"
+
+    //var homeArts : [Artwork] = []
+    
+    
+    /////////REQUEST/////////
+    func sendRequest(toUrl requestUrl: String) {
+        // 1. Il nous faut créer une session
+        // URLSession.shared est une session déjà créé qui ne nécessite pas de configuration
+        let session = URLSession.shared
+        session.configuration.timeoutIntervalForRequest = 3
+        
+        // 2. Création d'une instance d'URL
+        let url = URL(string: requestUrl)!
+        
+        // 3. Création d'une task utilisant cette session pour appeler l'URL demandée
+        let task = session.dataTask(with: url,
+                                    completionHandler: { data, response, error in
+                                        
+                                        if error != nil {
+                                            print("Error during request: \(error)")
+                                            return
+                                        }
+                                        
+                                        // On verifie que la réponse est dans les 2xx (pas d'erreur)
+                                        guard let httpResponse = response as? HTTPURLResponse,
+                                            (200...299).contains(httpResponse.statusCode) else {
+                                                if let httpResponse = response as? HTTPURLResponse {
+                                                    print("Error calling \(self.jasonURL), error code: \(httpResponse.statusCode)")
+                                                } else {
+                                                    print("Error calling \(self.jasonURL), no error code")
+                                                }
+                                                
+                                                return
+                                        }
+                                        
+                                        // Vérification du mimetype (optionnel)
+                                        guard let mime = response?.mimeType, mime == "application/json" else {
+                                            print("Wrong MIME type!")
+                                            return
+                                        }
+                                        
+                                        // Enfin: décodage de la réponse
+                                        let text = String(data: data!, encoding: String.Encoding.utf8)
+                                        print("result REQUEST: \n\n")
+                                        print(text)
+        })
+        
+        // Ici la requête a juste était préparée, mais pas envoyée
+        // Cet appel permet de lancer la tâche
+        task.resume()
+        
+    }
+    /////////AND-REQUEST/////////
     
     @IBOutlet weak var artsCollectionView: UICollectionView!
     
     func testLoader() {
         showLoader()
+        
+        // jsonLoader()
+        
+        
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             // Code you want to be delayed
             self.hideLoader()
         }
     }
+    
+    func loadHomeData() {
+        showLoader()
+        jsonLoader()
+        hideLoader()
+    }
+
+   /* let decoder = JSONDecoder()
+    decoder.keyDecodingStrategy = .convertFromSnakeCase
+    decoder.dateDecodingStrategy = .secondsSince1970
+    //let launch = try decoder.decode(Launch.self, from: jsonData)
+    */
+    
+    func jsonLoader() {
+        
+        
+        print("\t JSONLOADER")
+        
+        guard let path = Bundle.main.path(forResource: "artworks", ofType: "json") else {
+            print("ERROR getting json file")
+            return }
+        
+        let url = URL(fileURLWithPath: path)
+        print("url = [\(url)]")
+        
+        do {
+            let data = try Data(contentsOf: url)
+            //print(data)
+            
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+            
+            let result = try
+                decoder.decode(Artwork.JsonResponse.self, from: data)
+            
+            //print(result)
+            
+            Artwork.artworks = result.artworks
+            
+            // print(homeArts)
+            
+            
+        } catch  {
+            print("!!!! JSONloader - error : \n \(error)")
+            
+        }
+        
+        
+    }
+    
     
     func prepareCollectionView() {
         artsCollectionView.dataSource = self
@@ -68,11 +176,13 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Home"
+        title = "Arts"
         // navigationItem.title = "navItem"
-        // testLoader()
+        loadHomeData()
+        // Do any additional setup after loading the view.
+        // **testLoader()
+        
         prepareCollectionView()
-        // debug
         
 //        artsCollectionView.layer.borderColor = UIColor.red.cgColor
 //        artsCollectionView.layer.borderWidth = 1.0
@@ -112,12 +222,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     
     // MARK: - UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return homeArts.count
+        return Artwork.artworks.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeArtCollectionViewCell", for: indexPath) as! HomeArtCollectionViewCell
-        let art = homeArts[indexPath.item]
+        let art = Artwork.artworks[indexPath.item]
         cell.art = art
 
         if (selectedCell > -1) {
@@ -143,7 +253,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     }
     
     func updateCellsOpacity() {
-        for i in 0..<homeArts.count {
+        for i in 0..<Artwork.artworks.count {
             if let cell = artsCollectionView.cellForItem(at: IndexPath(row: i, section: 0)) as? HomeArtCollectionViewCell {
                 cell.layer.removeAllAnimations()
                 let targetOpacity = selectedCell == i ? 1.0 : 0.2
@@ -175,7 +285,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     
     func pushNextViewController() {
         // find a way to push this to the viewcontroller ?
-        let artworkId = homeArts[selectedCell]
+        let artworkId = Artwork.artworks[selectedCell]
 //        let viewController = ArtDetailViewController(nibName: "ArtDetailViewController", bundle: nil)
 //        self.navigationController?.pushViewController(viewController, animated: true)
         performSegue(withIdentifier: "artDetail", sender: nil)

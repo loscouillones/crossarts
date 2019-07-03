@@ -31,7 +31,8 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
 //        self.layer.borderWidth = 1.0
         
         if let art = art {
-            homeImageView.image = UIImage(named: "Stones")
+           // homeImageView.image = UIImage(named: "Stones")
+            homeImageView.download(from: art.portraitUrl)
             homeTextView.text = art.trivia
             homeTitleLabel.text = art.title
         } else {
