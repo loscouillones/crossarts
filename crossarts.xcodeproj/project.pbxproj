@@ -28,8 +28,22 @@
 		377DD00C22C6515B008D8077 /* HomeArtCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DD00B22C6515B008D8077 /* HomeArtCollectionViewCell.swift */; };
 		37CC644F22CA15CB00056EFD /* ArtDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC644E22CA15CB00056EFD /* ArtDetailViewController.swift */; };
 		37FE82F322CB5B870018EE50 /* ImageViewDropShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE82F222CB5B870018EE50 /* ImageViewDropShadowExtension.swift */; };
+		76741DAA22CCE21200809BB6 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76741D9F22CCE21200809BB6 /* Lato-Italic.ttf */; };
+		76741DAB22CCE21200809BB6 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76741DA022CCE21200809BB6 /* Lato-LightItalic.ttf */; };
+		76741DAC22CCE21200809BB6 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76741DA122CCE21200809BB6 /* Lato-Bold.ttf */; };
+		76741DAD22CCE21200809BB6 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76741DA222CCE21200809BB6 /* Lato-Black.ttf */; };
+		76741DAE22CCE21200809BB6 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76741DA322CCE21200809BB6 /* Lato-HairlineItalic.ttf */; };
+		76741DAF22CCE21200809BB6 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76741DA422CCE21200809BB6 /* Lato-Regular.ttf */; };
+		76741DB022CCE21200809BB6 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76741DA522CCE21200809BB6 /* Lato-Hairline.ttf */; };
+		76741DB122CCE21200809BB6 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76741DA622CCE21200809BB6 /* Lato-BlackItalic.ttf */; };
+		76741DB222CCE21200809BB6 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 76741DA722CCE21200809BB6 /* OFL.txt */; };
+		76741DB322CCE21200809BB6 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76741DA822CCE21200809BB6 /* Lato-BoldItalic.ttf */; };
+		76741DB422CCE21200809BB6 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76741DA922CCE21200809BB6 /* Lato-Light.ttf */; };
+		767C259C22CA4C05005DFE14 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767C259B22CA4C05005DFE14 /* FavoritesViewController.swift */; };
+		767C25A022CB5B9B005DFE14 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767C259F22CB5B9B005DFE14 /* Favorite.swift */; };
 		B38EF0D322CC0B53004D3B33 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38EF0D222CC0B53004D3B33 /* User.swift */; };
 		CDB9B5B63103E7250E7A5BC8 /* Pods_crossarts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDF1D493B24D017C5D6C32 /* Pods_crossarts.framework */; };
+		E543DBEE22CAB76C0093147C /* FavoritesListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E543DBED22CAB76C0093147C /* FavoritesListViewCell.swift */; };
 		E57C787422C806DD003AAA15 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57C787322C806DD003AAA15 /* Badge.swift */; };
 		ED2EAF6E5D735998F7B0B4ED /* Pods_crossartsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126D91F424830FD8DE52088C /* Pods_crossartsTests.framework */; };
 		FCC73C75BBC257BDCEB93CFA /* Pods_crossartsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B197F6BC7A89657B0B9CEA9 /* Pods_crossartsUITests.framework */; };
@@ -84,11 +98,25 @@
 		377DD00B22C6515B008D8077 /* HomeArtCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeArtCollectionViewCell.swift; path = crossarts/Views/HomeArtCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		37CC644E22CA15CB00056EFD /* ArtDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailViewController.swift; sourceTree = "<group>"; };
 		37FE82F222CB5B870018EE50 /* ImageViewDropShadowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewDropShadowExtension.swift; sourceTree = "<group>"; };
+		76741D9F22CCE21200809BB6 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		76741DA022CCE21200809BB6 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		76741DA122CCE21200809BB6 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		76741DA222CCE21200809BB6 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		76741DA322CCE21200809BB6 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		76741DA422CCE21200809BB6 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		76741DA522CCE21200809BB6 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		76741DA622CCE21200809BB6 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		76741DA722CCE21200809BB6 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		76741DA822CCE21200809BB6 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		76741DA922CCE21200809BB6 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		767C259B22CA4C05005DFE14 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		767C259F22CB5B9B005DFE14 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		897C20D08CD9A47CE292AA7E /* Pods-crossarts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crossarts.release.xcconfig"; path = "Target Support Files/Pods-crossarts/Pods-crossarts.release.xcconfig"; sourceTree = "<group>"; };
 		8B197F6BC7A89657B0B9CEA9 /* Pods_crossartsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_crossartsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF1628128D07EFEC8EB055E /* Pods-crossartsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crossartsTests.release.xcconfig"; path = "Target Support Files/Pods-crossartsTests/Pods-crossartsTests.release.xcconfig"; sourceTree = "<group>"; };
 		976516FFC61DED7001D843DD /* Pods-crossartsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crossartsTests.debug.xcconfig"; path = "Target Support Files/Pods-crossartsTests/Pods-crossartsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B38EF0D222CC0B53004D3B33 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E543DBED22CAB76C0093147C /* FavoritesListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewCell.swift; sourceTree = "<group>"; };
 		E57C787322C806DD003AAA15 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		E999A6F99E5350797A2814A8 /* Pods-crossartsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crossartsUITests.release.xcconfig"; path = "Target Support Files/Pods-crossartsUITests/Pods-crossartsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +183,7 @@
 		377DCFCB22C61480008D8077 /* crossarts */ = {
 			isa = PBXGroup;
 			children = (
+				76741D9E22CCE21200809BB6 /* fonts */,
 				372247F122CBB4F100562FFB /* like-anim.json */,
 				372247EE22CB9CFE00562FFB /* Components */,
 				377DD00422C63EDE008D8077 /* Extensions */,
@@ -203,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				377DD00722C64B20008D8077 /* Artwork.swift */,
+				767C259F22CB5B9B005DFE14 /* Favorite.swift */,
 				E57C787322C806DD003AAA15 /* Badge.swift */,
 				377DD00922C65057008D8077 /* Category.swift */,
 			);
@@ -214,8 +244,10 @@
 			children = (
 				3757AAA322CB95FA0033C481 /* AboutViewController.swift */,
 				377DCFCE22C61480008D8077 /* HomeViewController.swift */,
+				767C259B22CA4C05005DFE14 /* FavoritesViewController.swift */,
 				377DD00B22C6515B008D8077 /* HomeArtCollectionViewCell.swift */,
 				37CC644E22CA15CB00056EFD /* ArtDetailViewController.swift */,
+				E543DBED22CAB76C0093147C /* FavoritesListViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,6 +268,24 @@
 				3756264322CCD34D005CE807 /* ImageViewLoadURL.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		76741D9E22CCE21200809BB6 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				76741D9F22CCE21200809BB6 /* Lato-Italic.ttf */,
+				76741DA022CCE21200809BB6 /* Lato-LightItalic.ttf */,
+				76741DA122CCE21200809BB6 /* Lato-Bold.ttf */,
+				76741DA222CCE21200809BB6 /* Lato-Black.ttf */,
+				76741DA322CCE21200809BB6 /* Lato-HairlineItalic.ttf */,
+				76741DA422CCE21200809BB6 /* Lato-Regular.ttf */,
+				76741DA522CCE21200809BB6 /* Lato-Hairline.ttf */,
+				76741DA622CCE21200809BB6 /* Lato-BlackItalic.ttf */,
+				76741DA722CCE21200809BB6 /* OFL.txt */,
+				76741DA822CCE21200809BB6 /* Lato-BoldItalic.ttf */,
+				76741DA922CCE21200809BB6 /* Lato-Light.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		9042AC1F00AA96EC360D2BC4 /* Frameworks */ = {
@@ -378,11 +428,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				377DCFD722C61482008D8077 /* LaunchScreen.storyboard in Resources */,
+				76741DAC22CCE21200809BB6 /* Lato-Bold.ttf in Resources */,
+				76741DB122CCE21200809BB6 /* Lato-BlackItalic.ttf in Resources */,
+				76741DB422CCE21200809BB6 /* Lato-Light.ttf in Resources */,
+				76741DAE22CCE21200809BB6 /* Lato-HairlineItalic.ttf in Resources */,
 				372247F222CBB4F100562FFB /* like-anim.json in Resources */,
 				377DCFFD22C6159B008D8077 /* Badges.storyboard in Resources */,
+				76741DB322CCE21200809BB6 /* Lato-BoldItalic.ttf in Resources */,
+				76741DB222CCE21200809BB6 /* OFL.txt in Resources */,
 				377DD00322C63A5A008D8077 /* About.storyboard in Resources */,
 				377DCFD422C61482008D8077 /* Assets.xcassets in Resources */,
+				76741DAD22CCE21200809BB6 /* Lato-Black.ttf in Resources */,
+				76741DB022CCE21200809BB6 /* Lato-Hairline.ttf in Resources */,
 				377DCFFB22C6158D008D8077 /* Favorites.storyboard in Resources */,
+				76741DAA22CCE21200809BB6 /* Lato-Italic.ttf in Resources */,
+				76741DAF22CCE21200809BB6 /* Lato-Regular.ttf in Resources */,
+				76741DAB22CCE21200809BB6 /* Lato-LightItalic.ttf in Resources */,
 				3390136F22CA44840041E4E1 /* artworks.json in Resources */,
 				377DCFD222C61480008D8077 /* HomeAndDetails.storyboard in Resources */,
 			);
@@ -497,12 +558,15 @@
 			files = (
 				E57C787422C806DD003AAA15 /* Badge.swift in Sources */,
 				B38EF0D322CC0B53004D3B33 /* User.swift in Sources */,
+				767C259C22CA4C05005DFE14 /* FavoritesViewController.swift in Sources */,
+				E543DBEE22CAB76C0093147C /* FavoritesListViewCell.swift in Sources */,
 				377DD00622C63EFD008D8077 /* LoaderUIViewExtension.swift in Sources */,
 				37FE82F322CB5B870018EE50 /* ImageViewDropShadowExtension.swift in Sources */,
 				372247F022CB9D1000562FFB /* LikeButton.swift in Sources */,
 				3756264422CCD34D005CE807 /* ImageViewLoadURL.swift in Sources */,
 				377DD00A22C65057008D8077 /* Category.swift in Sources */,
 				37CC644F22CA15CB00056EFD /* ArtDetailViewController.swift in Sources */,
+				767C25A022CB5B9B005DFE14 /* Favorite.swift in Sources */,
 				377DCFCF22C61480008D8077 /* HomeViewController.swift in Sources */,
 				377DD00822C64B20008D8077 /* Artwork.swift in Sources */,
 				377DCFCD22C61480008D8077 /* AppDelegate.swift in Sources */,

@@ -8,9 +8,11 @@
 
 import UIKit
 
+
 class HomeViewController: UIViewController, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDelegate {
     var selectedCell = -1
     var previousSelectedCell = -1
+
     let jasonURL = "https://www.souljax.com/crossarts/artworks.json"
 //    var homeArts = [Artwork(id: 1,
 //                        landscapeUrl: "lanscape1",
@@ -47,9 +49,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
 //                            date: Date())]
 
     let cellScale: CGFloat = 0.8
-   // let FLICKR_URL = "https://www.souljax.com/crossarts/artworks.json"
-
-    //var homeArts : [Artwork] = []
     
     
     /////////REQUEST/////////
