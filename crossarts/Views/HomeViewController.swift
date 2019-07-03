@@ -12,44 +12,44 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     var selectedCell = -1
     var previousSelectedCell = -1
     let jasonURL = "https://www.souljax.com/crossarts/artworks.json"
-    var homeArts = [Artwork(id: 1,
-                        landscapeUrl: "lanscape1",
-                        portraitUrl: "portrait1",
-                        thumbUrl: "thumb1",
-                        description: "desc1",
-                        title: "title1",
-                        trivia: "trivia1",
-                        related: [],
-                        categoryId: 1,
-                        tags: [],
-                        date: Date()),
-                    Artwork(id: 2,
-                            landscapeUrl: "lanscape2",
-                            portraitUrl: "portrait2",
-                            thumbUrl: "thumb2",
-                            description: "desc2",
-                            title: "title2",
-                            trivia: "trivia2",
-                            related: [],
-                            categoryId: 2,
-                            tags: [],
-                            date: Date()),
-                    Artwork(id: 3,
-                            landscapeUrl: "lanscape3",
-                            portraitUrl: "portrait3",
-                            thumbUrl: "thumb3",
-                            description: "desc3",
-                            title: "title3",
-                            trivia: "trivia3",
-                            related: [],
-                            categoryId: 2,
-                            tags: [],
-                            date: Date())]
+//    var homeArts = [Artwork(id: 1,
+//                        landscapeUrl: "lanscape1",
+//                        portraitUrl: "portrait1",
+//                        thumbUrl: "thumb1",
+//                        description: "desc1",
+//                        title: "title1",
+//                        trivia: "trivia1",
+//                        related: [],
+//                        categoryId: 1,
+//                        tags: [],
+//                        date: Date()),
+//                    Artwork(id: 2,
+//                            landscapeUrl: "lanscape2",
+//                            portraitUrl: "portrait2",
+//                            thumbUrl: "thumb2",
+//                            description: "desc2",
+//                            title: "title2",
+//                            trivia: "trivia2",
+//                            related: [],
+//                            categoryId: 2,
+//                            tags: [],
+//                            date: Date()),
+//                    Artwork(id: 3,
+//                            landscapeUrl: "lanscape3",
+//                            portraitUrl: "portrait3",
+//                            thumbUrl: "thumb3",
+//                            description: "desc3",
+//                            title: "title3",
+//                            trivia: "trivia3",
+//                            related: [],
+//                            categoryId: 2,
+//                            tags: [],
+//                            date: Date())]
 
     let cellScale: CGFloat = 0.8
    // let FLICKR_URL = "https://www.souljax.com/crossarts/artworks.json"
 
-    // var homeArts : [Artwork] = []
+    var homeArts : [Artwork] = []
     
     
     /////////REQUEST/////////
