@@ -18,7 +18,7 @@ class FavoritesViewController: UITableViewController {
                             landscapeUrl: "lanscape1",
                             portraitUrl: "portrait1",
                             thumbUrl: "apple",
-                            description: "desc1",
+                            description: "Bonjour je m'appel Jean-Michel Quincampoix, j'aime les carottes rapées, le curling et les dances folkloriques traditionnelles.",
                             title: "title1",
                             trivia: "trivia1",
                             related: [],
