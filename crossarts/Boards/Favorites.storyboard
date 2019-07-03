@@ -14,7 +14,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Favorites-->
+        <!--Favoris-->
         <scene sceneID="N8F-aG-dS1">
             <objects>
                 <tableViewController storyboardIdentifier="Favorites" id="q1B-97-zip" customClass="FavoritesViewController" customModule="crossarts" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,7 +80,7 @@
                             <outlet property="delegate" destination="q1B-97-zip" id="CEL-Sd-9kt"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Favorites" id="wKu-z1-YGg"/>
+                    <tabBarItem key="tabBarItem" title="Favoris" image="Tab-Favorites" id="wKu-z1-YGg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="favoritesTableView" destination="56n-pO-byq" id="QJc-o5-hOn"/>
@@ -91,4 +91,7 @@
             <point key="canvasLocation" x="202.89855072463769" y="156.69642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Tab-Favorites" width="30" height="30"/>
+    </resources>
 </document>
