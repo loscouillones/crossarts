@@ -4,19 +4,22 @@
 //
 //  Created by Nico on 28/06/2019.
 //  Copyright © 2019 Nico. All rights reserved.
-//
+//akd3
 
 import Foundation
 
-struct Artwork {
+
+
+
+struct Artwork: Codable {
     let id: Int
-    let landscapeUrl: String
-    let portraitUrl: String
-    let thumbUrl: String
+    let landscapeUrl: URL
+    let portraitUrl: URL
+    let thumbUrl: URL
     let description: String
     let title: String
     let trivia: String
-    let related: Array<Int>
+    let related: [Int]
     let categoryId: Int
     let tags: Array<String>
     let date: Date
@@ -30,4 +33,8 @@ struct Artwork {
             return nil
         }
     }
+    struct JsonResponse: Codable {
+        let artworks: Array<Artwork>
+    }
+    
 }
