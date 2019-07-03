@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Favorites-->
+        <!--Favoris-->
         <scene sceneID="N8F-aG-dS1">
             <objects>
                 <tableViewController storyboardIdentifier="Favorites" id="q1B-97-zip" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                             <outlet property="delegate" destination="q1B-97-zip" id="CEL-Sd-9kt"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Favorites" id="wKu-z1-YGg"/>
+                    <tabBarItem key="tabBarItem" title="Favoris" image="favoris" landscapeImage="favoris" largeContentSizeImage="favoris" selectedImage="favoris" id="wKu-z1-YGg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBB-8Q-bje" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -40,4 +40,7 @@
             <point key="canvasLocation" x="203" y="157"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="favoris" width="75" height="75"/>
+    </resources>
 </document>

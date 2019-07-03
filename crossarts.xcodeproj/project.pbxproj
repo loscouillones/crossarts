@@ -13,7 +13,6 @@
 		377DCFCD22C61480008D8077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DCFCC22C61480008D8077 /* AppDelegate.swift */; };
 		377DCFCF22C61480008D8077 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DCFCE22C61480008D8077 /* HomeViewController.swift */; };
 		377DCFD222C61480008D8077 /* HomeAndDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377DCFD022C61480008D8077 /* HomeAndDetails.storyboard */; };
-		377DCFD422C61482008D8077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377DCFD322C61482008D8077 /* Assets.xcassets */; };
 		377DCFD722C61482008D8077 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377DCFD522C61482008D8077 /* LaunchScreen.storyboard */; };
 		377DCFE222C61482008D8077 /* crossartsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DCFE122C61482008D8077 /* crossartsTests.swift */; };
 		377DCFED22C61482008D8077 /* crossartsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DCFEC22C61482008D8077 /* crossartsUITests.swift */; };
@@ -30,6 +29,7 @@
 		CDB9B5B63103E7250E7A5BC8 /* Pods_crossarts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDF1D493B24D017C5D6C32 /* Pods_crossarts.framework */; };
 		E57C787422C806DD003AAA15 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57C787322C806DD003AAA15 /* Badge.swift */; };
 		ED2EAF6E5D735998F7B0B4ED /* Pods_crossartsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126D91F424830FD8DE52088C /* Pods_crossartsTests.framework */; };
+		F097C31422CCE08E00E56397 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F097C31322CCE08E00E56397 /* Images.xcassets */; };
 		FCC73C75BBC257BDCEB93CFA /* Pods_crossartsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B197F6BC7A89657B0B9CEA9 /* Pods_crossartsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +62,6 @@
 		377DCFCC22C61480008D8077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		377DCFCE22C61480008D8077 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		377DCFD122C61480008D8077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeAndDetails.storyboard; sourceTree = "<group>"; };
-		377DCFD322C61482008D8077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		377DCFD622C61482008D8077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		377DCFD822C61482008D8077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		377DCFDD22C61482008D8077 /* crossartsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = crossartsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +86,7 @@
 		B38EF0D222CC0B53004D3B33 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E57C787322C806DD003AAA15 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		E999A6F99E5350797A2814A8 /* Pods-crossartsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crossartsUITests.release.xcconfig"; path = "Target Support Files/Pods-crossartsUITests/Pods-crossartsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F097C31322CCE08E00E56397 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,8 +158,8 @@
 				377DD00022C61635008D8077 /* Views */,
 				377DCFFF22C61612008D8077 /* Models */,
 				B38EF0D122CC0B1C004D3B33 /* Settings */,
-				377DCFD322C61482008D8077 /* Assets.xcassets */,
 				377DCFD822C61482008D8077 /* Info.plist */,
+				F097C31322CCE08E00E56397 /* Images.xcassets */,
 			);
 			path = crossarts;
 			sourceTree = "<group>";
@@ -373,9 +373,9 @@
 			files = (
 				377DCFD722C61482008D8077 /* LaunchScreen.storyboard in Resources */,
 				372247F222CBB4F100562FFB /* like-anim.json in Resources */,
+				F097C31422CCE08E00E56397 /* Images.xcassets in Resources */,
 				377DCFFD22C6159B008D8077 /* Badges.storyboard in Resources */,
 				377DD00322C63A5A008D8077 /* About.storyboard in Resources */,
-				377DCFD422C61482008D8077 /* Assets.xcassets in Resources */,
 				377DCFFB22C6158D008D8077 /* Favorites.storyboard in Resources */,
 				377DCFD222C61480008D8077 /* HomeAndDetails.storyboard in Resources */,
 			);
@@ -674,16 +674,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 257068066DDF98B19B2CAA2C /* Pods-crossarts.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZH7GMPZQUW;
+				DEVELOPMENT_TEAM = S548PB6483;
 				INFOPLIST_FILE = crossarts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ares.crossarts;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ares.crossarts.momo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -694,16 +693,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 897C20D08CD9A47CE292AA7E /* Pods-crossarts.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZH7GMPZQUW;
+				DEVELOPMENT_TEAM = S548PB6483;
 				INFOPLIST_FILE = crossarts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ares.crossarts;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ares.crossarts.momo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

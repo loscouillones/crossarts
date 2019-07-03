@@ -193,6 +193,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="tof-tS-I6h" kind="relationship" relationship="viewControllers" id="6Bv-tH-DJT"/>
@@ -239,7 +241,7 @@
         <scene sceneID="LQH-7I-fch">
             <objects>
                 <navigationController title="Test 1" automaticallyAdjustsScrollViewInsets="NO" id="tof-tS-I6h" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="yuO-Pi-KND"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="arts1" landscapeImage="arts1" selectedImage="arts1" id="yuO-Pi-KND"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cPY-45-FOq">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -255,4 +257,7 @@
             <point key="canvasLocation" x="957.97101449275374" y="20.758928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arts1" width="40" height="40"/>
+    </resources>
 </document>

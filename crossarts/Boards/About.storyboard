@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--About-->
+        <!--A propos-->
         <scene sceneID="q52-gB-6s6">
             <objects>
                 <viewController storyboardIdentifier="About" id="gnT-PA-Btg" customClass="AboutViewController" customModule="crossarts" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,7 +57,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wlE-zV-PDp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" id="dlz-x8-9pM"/>
+                    <tabBarItem key="tabBarItem" title="A propos" image="apropos" landscapeImage="apropos" selectedImage="apropos" id="dlz-x8-9pM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boO-aj-JFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -65,4 +65,7 @@
             <point key="canvasLocation" x="155.07246376811597" y="128.57142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="apropos" width="37.5" height="37.5"/>
+    </resources>
 </document>
