@@ -12,7 +12,7 @@ import UIKit
 class HomeViewController: UIViewController, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDelegate {
     var selectedCell = -1
     var previousSelectedCell = -1
-
+    let HOME_CELLS = 3
     let jasonURL = "https://www.souljax.com/crossarts/artworks.json"
 //    var homeArts = [Artwork(id: 1,
 //                        landscapeUrl: "lanscape1",
@@ -220,7 +220,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     
     // MARK: - UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Artwork.artworks.count
+        return HOME_CELLS
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

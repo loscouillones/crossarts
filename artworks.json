@@ -1,6 +1,32 @@
 {
     "artworks":[
         {
+            "id":10,
+            "portraitUrl":"https://www.souljax.com/crossarts/images/ptr-10.jpg",
+            "landscapeUrl":"https://www.souljax.com/crossarts/images/ptr-10.jpg",
+            "thumbUrl":"https://www.souljax.com/crossarts/images/ptr-10.jpg",
+            "title":"Les Rolling Stones",
+            "description":"",
+            "trivia":"Le réalisateur Martin Scorsese a utilisé la chanson des Stones 'Gimme Shelter' dans 4 de ses films.",
+            "related":[1,2,3],
+            "categoryId":5,
+            "tags":[],
+            "date":"2016-06-07T17:20:00Z"
+        },
+        {
+            "id":11,
+            "portraitUrl":"https://www.souljax.com/crossarts/images/ptr-11.jpg",
+            "landscapeUrl":"https://www.souljax.com/crossarts/images/ptr-11.jpg",
+            "thumbUrl":"https://www.souljax.com/crossarts/images/ptr-11.jpg",
+            "title":"Coney Island",
+            "description":"",
+            "trivia":"Le boardwalk de Coney Island est un des endroits les plus visités de New York.",
+            "related":[1,2,3],
+            "categoryId":7,
+            "tags":[],
+            "date":"2016-06-07T17:20:00Z"
+        },
+        {
             "id":0,
             "portraitUrl":"https://www.souljax.com/crossarts/images/ptr-0.jpg",
             "landscapeUrl":"https://www.souljax.com/crossarts/images/ldsp-0.jpg",
