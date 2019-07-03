@@ -8,24 +8,25 @@
 import UIKit
 import Foundation
 
-class FavoritesViewController: UITableViewController {
+protocol FavoriteCellDelegate : class {
+    func didPressDeleteButton(_ tag: Int)
+}
+
+class FavoritesViewController: UITableViewController, FavoriteCellDelegate {
 
     @IBOutlet var favoritesTableView: UITableView!
     
-    var favorites:Array<Int> = []
-    var artworks:Array<Artwork> = []
-
+    var favoriteArtworks: Array<Artwork> = []
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favorites.count
+        return User.settings.favorites.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesListViewCell2", for: indexPath) as! FavoritesListViewCell
-        let favID = favorites[indexPath.item]
-        let artwork = artworks.first(where: { $0.id == favID } )
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesListCell", for: indexPath) as! FavoritesListViewCell
 
-        cell.artwork = artwork
+        cell.artwork = favoriteArtworks[indexPath.row]
+        cell.cellDelegate = self
         
         return cell
     }
@@ -36,4 +37,27 @@ class FavoritesViewController: UITableViewController {
         self.tableView.rowHeight = 130.0
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        refreshData()
+    }
+    
+    func refreshData() {
+        // get list of favorites
+        favoriteArtworks.removeAll()
+        favoriteArtworks = User.settings.favorites.map( { (id) -> Artwork in
+            return Artwork.getArtwork(id: id)!
+        })
+        
+        favoritesTableView.reloadData()
+    }
+    
+    func didPressDeleteButton(_ artworkId: Int) {
+        // delete favorite in user settings
+        User.settings.removeFavorite(favoriteId: artworkId)
+        
+        // reload the favorites list
+        refreshData()
+    }
 }

@@ -12,10 +12,12 @@ import UIKit
 class FavoritesListViewCell:  UITableViewCell {
     
     @IBOutlet weak var imgFavList: UIImageView!
-    @IBOutlet weak var imgFavCell: UIView!
     @IBOutlet weak var titleFavList: UILabel!
     @IBOutlet weak var textFavList: UITextField!
     
+    // delete button
+    var cellDelegate: FavoriteCellDelegate?
+    @IBOutlet weak var deleteButton: UIButton!
     var artwork: Artwork! {
         didSet {
             self.updateUI()
@@ -23,12 +25,8 @@ class FavoritesListViewCell:  UITableViewCell {
     }
     
     func updateUI() {
-        imgFavList.image = UIImage(named: "Joconde")
-        titleFavList.text = artwork.title
-        textFavList.text = artwork.description
-        
         if let artwork = artwork {
-            imgFavList.image = UIImage(named: "Joconde")
+            imgFavList.download(from: artwork.landscapeUrl)
             titleFavList.text = artwork.title
             textFavList.text = artwork.description
         } else {
@@ -36,16 +34,18 @@ class FavoritesListViewCell:  UITableViewCell {
             titleFavList.text = nil
             textFavList.text = nil
         }
-        setBoarders()
+        setBorders()
     }
     
-    func setBoarders() {
+    func setBorders() {
         imgFavList.layer.cornerRadius = 13.33
         imgFavList.layer.masksToBounds = true
-        imgFavCell?.layer.cornerRadius = 13.33
     }
   
-//    func yo() {
+    @IBAction func onDelete(_ sender: UIButton) {
+        cellDelegate?.didPressDeleteButton(artwork.id)
+    }
+    //    func yo() {
 //        guard let customFont = UIFont(name: "Lato-Black", size: UIFont.labelFontSize) else {
 //            fatalError("""
 //    Failed to load the "CustomFont-Light" font.
