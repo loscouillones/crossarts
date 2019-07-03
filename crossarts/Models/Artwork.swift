@@ -20,4 +20,14 @@ struct Artwork {
     let categoryId: Int
     let tags: Array<String>
     let date: Date
+    static var artworks: Array<Artwork> = []
+    static func getArtwork(id: Int) -> Artwork? {
+        if let index = artworks.firstIndex(where: {
+            (artwork) -> Bool in artwork.id == id
+        } ) {
+            return artworks[index]
+        } else {
+            return nil
+        }
+    }
 }

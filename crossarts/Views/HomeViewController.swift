@@ -58,6 +58,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
         }
     }
     
+    func loadHomeData() {
+        showLoader()
+        // loadData
+        hideLoader()
+    }
+    
     func prepareCollectionView() {
         artsCollectionView.dataSource = self
         artsCollectionView.delegate = self
@@ -66,11 +72,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Home"
+        title = "Arts"
         // navigationItem.title = "navItem"
-        // testLoader()
+        loadHomeData()
         prepareCollectionView()
-        // debug
         
 //        artsCollectionView.layer.borderColor = UIColor.red.cgColor
 //        artsCollectionView.layer.borderWidth = 1.0
