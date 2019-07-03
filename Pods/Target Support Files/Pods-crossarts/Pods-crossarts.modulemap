@@ -1,0 +1,6 @@
+framework module Pods_crossarts {
+  umbrella header "Pods-crossarts-umbrella.h"
+
+  export *
+  module * { export * }
+}
