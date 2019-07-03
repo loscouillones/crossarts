@@ -20,6 +20,8 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var likeButton: LikeButton!
     
+    @IBOutlet weak var homeTitleField: UITextView!
+    
     var art: Artwork! {
         didSet {
             self.updateUI()
@@ -34,10 +36,13 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
            // homeImageView.image = UIImage(named: "Stones")
             homeImageView.download(from: art.portraitUrl)
             homeTextView.text = art.trivia
-            homeTitleLabel.text = art.title
+            // homeTitleLabel.text = art.title
+            homeTitleField.text = art.title
+            homeTitleField.textContainer.lineBreakMode = .byWordWrapping
         } else {
             homeImageView.image = nil
-            homeTitleLabel.text = nil
+            // homeTitleLabel.text = nil
+            homeTitleField.text = nil
             homeTextView.text = nil
         }
         

@@ -8,56 +8,25 @@
 import UIKit
 import Foundation
 
-class FavoritesViewController: UITableViewController {
+protocol FavoriteCellDelegate : class {
+    func didPressDeleteButton(_ tag: Int)
+}
+
+class FavoritesViewController: UITableViewController, FavoriteCellDelegate {
 
     @IBOutlet var favoritesTableView: UITableView!
     
-    var favorites = [1, 2, 3]
-    
-    var artworks = [Artwork(id: 1,
-                            landscapeUrl: "lanscape1",
-                            portraitUrl: "portrait1",
-                            thumbUrl: "apple",
-                            description: "Bonjour je m'appel Jean-Michel Quincampoix, j'aime les carottes rapées, le curling et les dances folkloriques traditionnelles.",
-                            title: "title1",
-                            trivia: "trivia1",
-                            related: [],
-                            categoryId: 1,
-                            tags: [],
-                            date: Date()),
-                    Artwork(id: 2,
-                            landscapeUrl: "lanscape2",
-                            portraitUrl: "portrait2",
-                            thumbUrl: "apple2",
-                            description: "desc2",
-                            title: "title2",
-                            trivia: "trivia2",
-                            related: [],
-                            categoryId: 2,
-                            tags: [],
-                            date: Date()),
-                    Artwork(id: 3,
-                            landscapeUrl: "lanscape3",
-                            portraitUrl: "portrait3",
-                            thumbUrl: "apple3",
-                            description: "desc3",
-                            title: "title3",
-                            trivia: "trivia3",
-                            related: [],
-                            categoryId: 2,
-                            tags: [],
-                            date: Date())]
+    var favoriteArtworks: Array<Artwork> = []
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favorites.count
+        return User.settings.favorites.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesListViewCell2", for: indexPath) as! FavoritesListViewCell
-        let favID = favorites[indexPath.item]
-        let artwork = artworks.first(where: { $0.id == favID } )
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesListCell", for: indexPath) as! FavoritesListViewCell
 
-        cell.artwork = artwork
+        cell.artwork = favoriteArtworks[indexPath.row]
+        cell.cellDelegate = self
         
         return cell
     }
@@ -68,4 +37,27 @@ class FavoritesViewController: UITableViewController {
         self.tableView.rowHeight = 130.0
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        refreshData()
+    }
+    
+    func refreshData() {
+        // get list of favorites
+        favoriteArtworks.removeAll()
+        favoriteArtworks = User.settings.favorites.map( { (id) -> Artwork in
+            return Artwork.getArtwork(id: id)!
+        })
+        
+        favoritesTableView.reloadData()
+    }
+    
+    func didPressDeleteButton(_ artworkId: Int) {
+        // delete favorite in user settings
+        User.settings.removeFavorite(favoriteId: artworkId)
+        
+        // reload the favorites list
+        refreshData()
+    }
 }
