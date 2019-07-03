@@ -17,24 +17,24 @@ class AboutViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let animationView = AnimationView(name: "like-anim")
-
-        animationView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
-        animationView.center = self.view.center
-        // animationView.contentMode = .scaleAspectFill
-
-        view.addSubview(animationView)
-
-        animationView.play(fromProgress: 0, toProgress: 0)
+//        let animationView = AnimationView(name: "like-anim")
+//
+//        animationView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+//        animationView.center = self.view.center
+//        // animationView.contentMode = .scaleAspectFill
+//
+//        view.addSubview(animationView)
+//
+//        animationView.play(fromProgress: 0, toProgress: 0)
+        self.navigationController?.title = "A propos de CrossArts"
     }
     
-    
-    @IBAction func onButtonTap(_ sender: Any) {
-        print("tap!")
+    @IBAction func onClearSettings(_ sender: Any) {
+        User.settings.clearUserData()
     }
     
-    @IBAction func onLikeButtonTap(_ sender: Any) {
-        
+    @IBAction func onClearFavorites(_ sender: Any) {
+        User.settings.clearFavorites()
     }
     /*
     // MARK: - Navigation

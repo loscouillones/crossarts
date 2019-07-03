@@ -40,6 +40,10 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
             homeTextView.text = nil
         }
         
+        // get favorite status
+        likeButton.isLiked = User.settings.hasFavorite(favoriteId: art.id)
+        print("isLiked: \(likeButton.isLiked)")
+        
         setBorders()
         // setShadow()
     }
@@ -55,8 +59,12 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
     @IBAction func onLikeTap(_ sender: Any) {
         print("Click on like for artwork: \(art.id)")
         likeButton.isLiked = !likeButton.isLiked
+        
         if likeButton.isLiked {
             likeButton.doLike()
+            User.settings.addFavorite(favoriteId: art.id)
+        } else {
+            User.settings.removeFavorite(favoriteId: art.id)
         }
     }
     
