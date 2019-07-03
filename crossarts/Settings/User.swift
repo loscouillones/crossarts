@@ -14,7 +14,7 @@ class User {
     // favoritesId
     var favorites: [Int] = []
     // for each badge: obtained
-    var badges: [Int] = [-1, -1, -1, -1, -1, -1, -1, -1]
+    var badges: [Int] = [1, -1, -1, -1, -1, -1, -1, -1]
     // for each badge: number of views
     var badgeViews: [Int] = [0, 0, 0, 0, 0, 0, 0, 0]
     

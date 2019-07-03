@@ -10,6 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDelegate {
     var selectedCell = -1
+    var previousSelectedCell = -1
     
     var homeArts = [Artwork(id: 1,
                         landscapeUrl: "lanscape1",
@@ -97,17 +98,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     }
     
     func setSelected(_ index: Int, _ scrollToItem: Bool = false) {
+        print("setSelected(\(index))")
         selectedCell = index
-        
-        // change opacity of all cells
-        for i in 0..<homeArts.count {
-            if let cell = artsCollectionView.cellForItem(at: IndexPath(item: i, section: 0)) as? HomeArtCollectionViewCell {
-                let targetOpacity = selectedCell == i ? 1.0 : 0.2
-                UIView.animate(withDuration: selectedCell == i ? 0.3 : 0.8, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
-                    cell.layer.opacity = Float(targetOpacity)
-                })
-            }
-        }
         
         // if needed scroll to specified cell
         if scrollToItem {
@@ -143,7 +135,32 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
         
         targetContentOffset.pointee = offset
         
+        // updateCellsOpacity()
+        
         setSelected(Int(roundedIndex))
+    }
+    
+    func updateCellsOpacity() {
+        for i in 0..<homeArts.count {
+            if let cell = artsCollectionView.cellForItem(at: IndexPath(row: i, section: 0)) as? HomeArtCollectionViewCell {
+                cell.layer.removeAllAnimations()
+                let targetOpacity = selectedCell == i ? 1.0 : 0.2
+                print("animate(\(i), \(targetOpacity))")
+                UIView.animate(withDuration: selectedCell == i ? 0.2 : 0.6, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
+                    cell.layer.opacity = Float(targetOpacity)
+                })
+            }
+        }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        print("didEndDecelerating")
+        updateCellsOpacity()
+    }
+    
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        print("willBeginDecelerating")
+        updateCellsOpacity()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
