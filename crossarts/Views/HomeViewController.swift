@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class HomeViewController: UIViewController, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDelegate {
     var selectedCell = -1
     var previousSelectedCell = -1
