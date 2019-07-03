@@ -49,7 +49,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     let cellScale: CGFloat = 0.8
    // let FLICKR_URL = "https://www.souljax.com/crossarts/artworks.json"
 
-    var homeArts : [Artwork] = []
+    //var homeArts : [Artwork] = []
     
     
     /////////REQUEST/////////
@@ -107,8 +107,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     func testLoader() {
         showLoader()
         
-        //
-        jsonLoader()
+        // jsonLoader()
         
         
         
@@ -120,7 +119,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     
     func loadHomeData() {
         showLoader()
-        // loadData
+        jsonLoader()
         hideLoader()
     }
 
@@ -135,7 +134,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
         
         print("\t JSONLOADER")
         
-        guard let path = Bundle.main.path(forResource: "artworks", ofType: "json") else { return }
+        guard let path = Bundle.main.path(forResource: "artworks", ofType: "json") else {
+            print("ERROR getting json file")
+            return }
         
         let url = URL(fileURLWithPath: path)
         print("url = [\(url)]")
@@ -148,11 +149,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
             decoder.dateDecodingStrategy = .iso8601
             
             let result = try
-                decoder.decode(JsonResponse.self, from: data)
+                decoder.decode(Artwork.JsonResponse.self, from: data)
             
             //print(result)
             
-            homeArts = result.artworks
+            Artwork.artworks = result.artworks
             
             // print(homeArts)
             
@@ -220,12 +221,12 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     
     // MARK: - UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return homeArts.count
+        return Artwork.artworks.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeArtCollectionViewCell", for: indexPath) as! HomeArtCollectionViewCell
-        let art = homeArts[indexPath.item]
+        let art = Artwork.artworks[indexPath.item]
         cell.art = art
 
         if (selectedCell > -1) {
@@ -251,7 +252,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     }
     
     func updateCellsOpacity() {
-        for i in 0..<homeArts.count {
+        for i in 0..<Artwork.artworks.count {
             if let cell = artsCollectionView.cellForItem(at: IndexPath(row: i, section: 0)) as? HomeArtCollectionViewCell {
                 cell.layer.removeAllAnimations()
                 let targetOpacity = selectedCell == i ? 1.0 : 0.2
@@ -283,7 +284,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     
     func pushNextViewController() {
         // find a way to push this to the viewcontroller ?
-        let artworkId = homeArts[selectedCell]
+        let artworkId = Artwork.artworks[selectedCell]
 //        let viewController = ArtDetailViewController(nibName: "ArtDetailViewController", bundle: nil)
 //        self.navigationController?.pushViewController(viewController, animated: true)
         performSegue(withIdentifier: "artDetail", sender: nil)

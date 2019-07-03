@@ -8,9 +8,7 @@
 
 import Foundation
 
-struct JsonResponse: Codable {
-    let artworks: Array<Artwork>
-}
+
 
 
 struct Artwork: Codable {
@@ -35,4 +33,8 @@ struct Artwork: Codable {
             return nil
         }
     }
+    struct JsonResponse: Codable {
+        let artworks: Array<Artwork>
+    }
+    
 }
