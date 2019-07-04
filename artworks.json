@@ -1,5 +1,4 @@
-{
-    "artworks":[
+[
         {
             "id":10,
             "portraitUrl":"https://www.souljax.com/crossarts/images/ptr-10.jpg",
@@ -157,4 +156,3 @@
             "date":"2016-06-05T17:20:00Z"
         }
     ]
-}

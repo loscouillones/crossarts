@@ -46,12 +46,16 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
             homeTextView.text = nil
         }
         
-        // get favorite status
-        likeButton.isLiked = User.settings.hasFavorite(favoriteId: art.id)
-        print("isLiked: \(likeButton.isLiked)")
+        updateLikeStatus()
         
         setBorders()
         // setShadow()
+    }
+    
+    func updateLikeStatus() {
+        // get favorite status
+        likeButton.isLiked = User.settings.hasFavorite(favoriteId: art.id)
+        print("isLiked: \(likeButton.isLiked)")
     }
     
     func setBorders() {

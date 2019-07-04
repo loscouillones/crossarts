@@ -8,9 +8,6 @@
 
 import Foundation
 
-
-
-
 struct Artwork: Codable {
     let id: Int
     let landscapeUrl: URL
@@ -33,8 +30,4 @@ struct Artwork: Codable {
             return nil
         }
     }
-    struct JsonResponse: Codable {
-        let artworks: Array<Artwork>
-    }
-    
 }
