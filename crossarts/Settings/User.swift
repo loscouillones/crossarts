@@ -23,7 +23,7 @@ class User {
     func addFavorite(favoriteId: Int) {
         if !hasFavorite(favoriteId: favoriteId) {
             print("Adding favorite: \(favoriteId)")
-            favorites.append(favoriteId)
+            favorites.insert(favoriteId, at: 0)
             saveFavorites()
         } else {
             print("Already favorited: \(favoriteId)")
