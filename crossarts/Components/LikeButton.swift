@@ -73,7 +73,7 @@ class LikeButton: UIButton {
     }
     
     func doLike() {
-        animationView.play(fromProgress: 0, toProgress: 1)
+        animationView.play(fromProgress: 0.2, toProgress: 1)
     }
     
     override func didMoveToSuperview() {
