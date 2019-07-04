@@ -47,8 +47,8 @@
                                                         <constraint firstAttribute="height" constant="4" id="RO5-Ve-SX9"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cross'cards du jour !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehN-bF-vll">
-                                                    <rect key="frame" x="20" y="44" width="376" height="32.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehN-bF-vll">
+                                                    <rect key="frame" x="20" y="44" width="376" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -163,10 +163,18 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cross'cards du jour !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1W-eU-TYy">
+                                <rect key="frame" x="20" y="135.5" width="374" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aZ7-ts-5c1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Bo2-Kx-28T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m1W-eU-TYy" secondAttribute="trailing" constant="20" id="CaK-CX-2gw"/>
+                            <constraint firstItem="m1W-eU-TYy" firstAttribute="bottom" secondItem="aZ7-ts-5c1" secondAttribute="top" constant="80" id="Ken-7Y-1ao"/>
+                            <constraint firstItem="m1W-eU-TYy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RZG-wn-YXa"/>
                             <constraint firstItem="aZ7-ts-5c1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cxE-YB-a3o"/>
                             <constraint firstItem="aZ7-ts-5c1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="est-6V-ArV"/>
                             <constraint firstItem="aZ7-ts-5c1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="o2f-rq-Gba"/>
