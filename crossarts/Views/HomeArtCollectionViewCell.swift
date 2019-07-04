@@ -22,6 +22,8 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var homeTitleField: UITextView!
     
+    @IBOutlet weak var bottomGradientImageView: UIImageView!
+    
     var art: Artwork! {
         didSet {
             self.updateUI()

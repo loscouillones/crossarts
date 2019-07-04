@@ -42,6 +42,7 @@
 		76741DB422CCE21200809BB6 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76741DA922CCE21200809BB6 /* Lato-Light.ttf */; };
 		767C259C22CA4C05005DFE14 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767C259B22CA4C05005DFE14 /* FavoritesViewController.swift */; };
 		767C25A022CB5B9B005DFE14 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767C259F22CB5B9B005DFE14 /* Favorite.swift */; };
+		B304C12222CEBBB60040B4AE /* UIViewFlipExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B304C12122CEBBB60040B4AE /* UIViewFlipExtension.swift */; };
 		B38EF0D322CC0B53004D3B33 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38EF0D222CC0B53004D3B33 /* User.swift */; };
 		CDB9B5B63103E7250E7A5BC8 /* Pods_crossarts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDF1D493B24D017C5D6C32 /* Pods_crossarts.framework */; };
 		E543DBEE22CAB76C0093147C /* FavoritesListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E543DBED22CAB76C0093147C /* FavoritesListViewCell.swift */; };
@@ -117,6 +118,7 @@
 		8B197F6BC7A89657B0B9CEA9 /* Pods_crossartsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_crossartsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF1628128D07EFEC8EB055E /* Pods-crossartsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crossartsTests.release.xcconfig"; path = "Target Support Files/Pods-crossartsTests/Pods-crossartsTests.release.xcconfig"; sourceTree = "<group>"; };
 		976516FFC61DED7001D843DD /* Pods-crossartsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crossartsTests.debug.xcconfig"; path = "Target Support Files/Pods-crossartsTests/Pods-crossartsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B304C12122CEBBB60040B4AE /* UIViewFlipExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewFlipExtension.swift; sourceTree = "<group>"; };
 		B38EF0D222CC0B53004D3B33 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E543DBED22CAB76C0093147C /* FavoritesListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewCell.swift; sourceTree = "<group>"; };
 		E57C787322C806DD003AAA15 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				37FE82F222CB5B870018EE50 /* ImageViewDropShadowExtension.swift */,
 				3756264322CCD34D005CE807 /* ImageViewLoadURL.swift */,
 				37E9D29E22CE1B150027FD26 /* UIViewDebug.swift */,
+				B304C12122CEBBB60040B4AE /* UIViewFlipExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				377DD00622C63EFD008D8077 /* LoaderUIViewExtension.swift in Sources */,
 				37FE82F322CB5B870018EE50 /* ImageViewDropShadowExtension.swift in Sources */,
 				372247F022CB9D1000562FFB /* LikeButton.swift in Sources */,
+				B304C12222CEBBB60040B4AE /* UIViewFlipExtension.swift in Sources */,
 				3756264422CCD34D005CE807 /* ImageViewLoadURL.swift in Sources */,
 				377DD00A22C65057008D8077 /* Category.swift in Sources */,
 				37CC644F22CA15CB00056EFD /* ArtDetailViewController.swift in Sources */,
