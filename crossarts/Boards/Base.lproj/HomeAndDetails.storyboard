@@ -186,7 +186,7 @@
         <!--Item-->
         <scene sceneID="1Zm-Pf-fQm">
             <objects>
-                <viewController id="hxd-HG-2lN" customClass="ArtDetailViewController" customModule="crossarts" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArtDetailController" id="hxd-HG-2lN" customClass="ArtDetailViewController" customModule="crossarts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bS0-YB-nRX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -238,15 +238,25 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BS5-lf-UC8">
+                                                <rect key="frame" x="0.0" y="0.0" width="112.5" height="110"/>
+                                                <connections>
+                                                    <action selector="onRelated1Tap:" destination="hxd-HG-2lN" eventType="touchUpInside" id="mHT-Ub-PrC"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="qqD-Zc-yIV" firstAttribute="centerY" secondItem="rMX-mm-Su9" secondAttribute="centerY" id="9El-cS-Q94"/>
                                             <constraint firstAttribute="trailing" secondItem="qqD-Zc-yIV" secondAttribute="trailing" constant="10" id="LZP-A8-brd"/>
                                             <constraint firstItem="ZZ7-KR-Gzo" firstAttribute="top" secondItem="rMX-mm-Su9" secondAttribute="top" id="QCz-3o-zlq"/>
+                                            <constraint firstAttribute="bottom" secondItem="BS5-lf-UC8" secondAttribute="bottom" id="SKR-Gd-qCG"/>
                                             <constraint firstAttribute="bottom" secondItem="ZZ7-KR-Gzo" secondAttribute="bottom" id="SOj-ML-AaH"/>
                                             <constraint firstItem="qqD-Zc-yIV" firstAttribute="leading" secondItem="rMX-mm-Su9" secondAttribute="leading" constant="10" id="VKF-PI-Cd4"/>
                                             <constraint firstAttribute="trailing" secondItem="ZZ7-KR-Gzo" secondAttribute="trailing" id="cgP-rl-8Bd"/>
+                                            <constraint firstAttribute="trailing" secondItem="BS5-lf-UC8" secondAttribute="trailing" id="d44-C8-aDG"/>
+                                            <constraint firstItem="BS5-lf-UC8" firstAttribute="leading" secondItem="rMX-mm-Su9" secondAttribute="leading" id="egI-h5-hOU"/>
+                                            <constraint firstItem="BS5-lf-UC8" firstAttribute="top" secondItem="rMX-mm-Su9" secondAttribute="top" id="s3O-d3-N2H"/>
                                             <constraint firstItem="ZZ7-KR-Gzo" firstAttribute="leading" secondItem="rMX-mm-Su9" secondAttribute="leading" id="wCT-Ty-lLM"/>
                                         </constraints>
                                     </view>
@@ -269,6 +279,14 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPs-td-whN">
+                                                <rect key="frame" x="-0.5" y="0.0" width="112.5" height="110"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="onRelated1Tap:" destination="hxd-HG-2lN" eventType="touchUpInside" id="rkf-0n-ezg"/>
+                                                    <action selector="onRelated2Tap:" destination="hxd-HG-2lN" eventType="touchUpInside" id="JEd-VW-FqV"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -291,6 +309,14 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hj4-3l-Q2L">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="110"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="onRelated1Tap:" destination="hxd-HG-2lN" eventType="touchUpInside" id="kD5-01-uT8"/>
+                                                    <action selector="onRelatedTap:" destination="hxd-HG-2lN" eventType="touchUpInside" id="Yd0-Q7-ZSd"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -333,6 +359,9 @@
                         <outlet property="relatedLabel1" destination="qqD-Zc-yIV" id="UNh-v5-T8W"/>
                         <outlet property="relatedLabel2" destination="AXU-63-f1Y" id="rXR-L4-zPl"/>
                         <outlet property="relatedLabel3" destination="Hv3-c8-Eeg" id="qer-G5-O7k"/>
+                        <outlet property="relatedOverlay1" destination="ZZ7-KR-Gzo" id="wql-Am-JwJ"/>
+                        <outlet property="relatedOverlay2" destination="zIz-rT-lvH" id="lll-QC-C1c"/>
+                        <outlet property="relatedOverlay3" destination="DgO-5m-E29" id="Nfl-qe-0uG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnB-RB-T5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
