@@ -10,159 +10,44 @@ import UIKit
 
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDelegate {
-    var selectedCell = -1
-    var previousSelectedCell = -1
-    let HOME_CELLS = 3
-    let jasonURL = "https://www.souljax.com/crossarts/artworks.json"
-//    var homeArts = [Artwork(id: 1,
-//                        landscapeUrl: "lanscape1",
-//                        portraitUrl: "portrait1",
-//                        thumbUrl: "thumb1",
-//                        description: "desc1",
-//                        title: "title1",
-//                        trivia: "trivia1",
-//                        related: [],
-//                        categoryId: 1,
-//                        tags: [],
-//                        date: Date()),
-//                    Artwork(id: 2,
-//                            landscapeUrl: "lanscape2",
-//                            portraitUrl: "portrait2",
-//                            thumbUrl: "thumb2",
-//                            description: "desc2",
-//                            title: "title2",
-//                            trivia: "trivia2",
-//                            related: [],
-//                            categoryId: 2,
-//                            tags: [],
-//                            date: Date()),
-//                    Artwork(id: 3,
-//                            landscapeUrl: "lanscape3",
-//                            portraitUrl: "portrait3",
-//                            thumbUrl: "thumb3",
-//                            description: "desc3",
-//                            title: "title3",
-//                            trivia: "trivia3",
-//                            related: [],
-//                            categoryId: 2,
-//                            tags: [],
-//                            date: Date())]
-
-    let cellScale: CGFloat = 0.8
-    
-    
-    /////////REQUEST/////////
-    func sendRequest(toUrl requestUrl: String) {
-        // 1. Il nous faut créer une session
-        // URLSession.shared est une session déjà créé qui ne nécessite pas de configuration
-        let session = URLSession.shared
-        session.configuration.timeoutIntervalForRequest = 3
-        
-        // 2. Création d'une instance d'URL
-        let url = URL(string: requestUrl)!
-        
-        // 3. Création d'une task utilisant cette session pour appeler l'URL demandée
-        let task = session.dataTask(with: url,
-                                    completionHandler: { data, response, error in
-                                        
-                                        if error != nil {
-                                            print("Error during request: \(error)")
-                                            return
-                                        }
-                                        
-                                        // On verifie que la réponse est dans les 2xx (pas d'erreur)
-                                        guard let httpResponse = response as? HTTPURLResponse,
-                                            (200...299).contains(httpResponse.statusCode) else {
-                                                if let httpResponse = response as? HTTPURLResponse {
-                                                    print("Error calling \(self.jasonURL), error code: \(httpResponse.statusCode)")
-                                                } else {
-                                                    print("Error calling \(self.jasonURL), no error code")
-                                                }
-                                                
-                                                return
-                                        }
-                                        
-                                        // Vérification du mimetype (optionnel)
-                                        guard let mime = response?.mimeType, mime == "application/json" else {
-                                            print("Wrong MIME type!")
-                                            return
-                                        }
-                                        
-                                        // Enfin: décodage de la réponse
-                                        let text = String(data: data!, encoding: String.Encoding.utf8)
-                                        print("result REQUEST: \n\n")
-                                        print(text)
-        })
-        
-        // Ici la requête a juste était préparée, mais pas envoyée
-        // Cet appel permet de lancer la tâche
-        task.resume()
-        
-    }
-    /////////AND-REQUEST/////////
-    
     @IBOutlet weak var artsCollectionView: UICollectionView!
     
-    func testLoader() {
-        showLoader()
-        
-        // jsonLoader()
-        
-        
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            // Code you want to be delayed
-            self.hideLoader()
-        }
-    }
+    var selectedCell = -1
+    var previousSelectedCell = -1
+    // number of cells to show in the carrousel
+    let HOME_CELLS = 3
+    // scaled size of the cells
+    let CELL_SCALE: CGFloat = 0.8
+    // sibbling's opacity
+    let SIBBLING_OPACITY: Float = 0.2
     
     func loadHomeData() {
         showLoader()
-        jsonLoader()
+        loadLocalJSON()
         hideLoader()
     }
-
-   /* let decoder = JSONDecoder()
-    decoder.keyDecodingStrategy = .convertFromSnakeCase
-    decoder.dateDecodingStrategy = .secondsSince1970
-    //let launch = try decoder.decode(Launch.self, from: jsonData)
-    */
     
-    func jsonLoader() {
-        
-        
+    func loadLocalJSON() {
         print("\t JSONLOADER")
         
         guard let path = Bundle.main.path(forResource: "artworks", ofType: "json") else {
             print("ERROR getting json file")
-            return }
+            return
+        }
         
         let url = URL(fileURLWithPath: path)
         print("url = [\(url)]")
         
         do {
             let data = try Data(contentsOf: url)
-            //print(data)
             
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
             
-            let result = try
-                decoder.decode(Artwork.JsonResponse.self, from: data)
-            
-            //print(result)
-            
-            Artwork.artworks = result.artworks
-            
-            // print(homeArts)
-            
-            
+            Artwork.artworks = try decoder.decode((Array<Artwork>).self, from: data)
         } catch  {
-            print("!!!! JSONloader - error : \n \(error)")
-            
+            print("Error while loading/parsing local artworks JSON: \n \(error)")
         }
-        
-        
     }
     
     
@@ -177,20 +62,16 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
         title = "Arts"
         // navigationItem.title = "navItem"
         loadHomeData()
-        // Do any additional setup after loading the view.
-        // **testLoader()
         
         prepareCollectionView()
         
-//        artsCollectionView.layer.borderColor = UIColor.red.cgColor
-//        artsCollectionView.layer.borderWidth = 1.0
         calcCellSize()
     }
     
     func calcCellSize() {
         let screenSize = UIScreen.main.bounds.size
-        let cellWidth = floor(screenSize.width * cellScale)
-        let cellHeight = floor(screenSize.height * cellScale)
+        let cellWidth = floor(screenSize.width * CELL_SCALE)
+        let cellHeight = floor(screenSize.height * CELL_SCALE)
 
         let insetX = (view.bounds.width - cellWidth) / 2.0
         let insetY = (view.bounds.height - cellHeight) / 2.0
@@ -204,6 +85,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
+        // center the scrolling on the middle cell
         setSelected(1, true)
     }
     
@@ -229,12 +111,14 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
         cell.art = art
 
         if (selectedCell > -1) {
-            cell.layer.opacity = selectedCell == indexPath.row ? 1 : 0.2
+            cell.layer.opacity = selectedCell == indexPath.row ? 1 : SIBBLING_OPACITY
         }
         
         return cell
     }
-    
+
+    // automatically position the scroll on the closer cell when scrollView will
+    // end dragging
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let layout = self.artsCollectionView?.collectionViewLayout as! UICollectionViewFlowLayout
         let cellWidthWithPadding = layout.itemSize.width + layout.minimumLineSpacing
@@ -245,11 +129,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
         
         targetContentOffset.pointee = offset
         
-        // updateCellsOpacity()
-        
         setSelected(Int(roundedIndex))
     }
     
+    // update each cell's opacity depending on its position relative to the selected cell
     func updateCellsOpacity() {
         for i in 0..<Artwork.artworks.count {
             if let cell = artsCollectionView.cellForItem(at: IndexPath(row: i, section: 0)) as? HomeArtCollectionViewCell {
@@ -282,9 +165,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     }
     
     func pushNextViewController() {
-        // find a way to push this to the viewcontroller ?
-//        let viewController = ArtDetailViewController(nibName: "ArtDetailViewController", bundle: nil)
-//        self.navigationController?.pushViewController(viewController, animated: true)
         performSegue(withIdentifier: "artDetail", sender: nil)
     }
     
@@ -295,7 +175,16 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
             controller.artwork = Artwork.artworks[selectedCell]
             
         default:
-            print("Plop")
+            print("defaultSegue")
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // update like button status in case it has been updated outside of this controller
+        for i in 0..<Artwork.artworks.count {
+            if let cell = artsCollectionView.cellForItem(at: IndexPath(row: i, section: 0)) as? HomeArtCollectionViewCell {
+                cell.updateLikeStatus()
+            }
         }
     }
 }
