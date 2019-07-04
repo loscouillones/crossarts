@@ -9,14 +9,128 @@
 import UIKit
 
 class ArtDetailViewController: UIViewController {
-
+    var artwork:Artwork?
+    
+    
+    @IBOutlet weak var artLabel: UILabel!
+    
+    @IBOutlet weak var artImageView: UIImageView!
+    
+    
+    @IBOutlet weak var artDescription: UITextView!
+    @IBOutlet weak var relatedImageView1: UIImageView!
+    
+    
+    @IBOutlet weak var relatedLabel1: UILabel!
+    
+    
+    @IBOutlet weak var relatedImageView2: UIImageView!
+    
+    @IBOutlet weak var relatedLabel2: UILabel!
+    
+    @IBOutlet weak var relatedImageView3: UIImageView!
+    
+    @IBOutlet weak var relatedLabel3: UILabel!
+    
+    
+    @IBOutlet weak var relatedOverlay1: UIView!
+    
+    @IBOutlet weak var relatedOverlay2: UIView!
+    
+    
+    @IBOutlet weak var relatedOverlay3: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "detail"
+        
+        
         // Do any additional setup after loading the view.
     }
     
-
+    func updateUI() {
+        if artwork != nil {
+            artLabel.text = artwork?.title
+            artDescription.text = artwork?.description
+            artImageView.download(from: artwork!.landscapeUrl)
+            
+            // rounded corners
+            artImageView.layer.cornerRadius = 13
+            artImageView.layer.masksToBounds = true
+            
+            // related 1
+            if artwork!.related.count > 0 {
+                let relatedId = artwork!.related[0]
+                let relatedArtwork = Artwork.getArtwork(id: relatedId)
+                relatedLabel1.text = relatedArtwork?.title
+                relatedImageView1.download(from: relatedArtwork!.thumbUrl)
+                relatedImageView1.layer.cornerRadius = 13
+                relatedImageView1.layer.masksToBounds = true
+                relatedOverlay1.layer.cornerRadius = 13
+                relatedOverlay1.layer.masksToBounds = true
+            }
+            
+            // related 2
+            if artwork!.related.count > 1 {
+                let relatedId = artwork!.related[1]
+                let relatedArtwork = Artwork.getArtwork(id: relatedId)
+                relatedLabel2.text = relatedArtwork?.title
+                relatedImageView2.download(from: relatedArtwork!.thumbUrl)
+                relatedImageView2.layer.cornerRadius = 13
+                relatedImageView2.layer.masksToBounds = true
+                relatedOverlay2.layer.cornerRadius = 13
+                relatedOverlay2.layer.masksToBounds = true
+            }
+            
+            // related 3
+            if artwork!.related.count > 2 {
+                let relatedId = artwork!.related[2]
+                let relatedArtwork = Artwork.getArtwork(id: relatedId)
+                relatedLabel3.text = relatedArtwork?.title
+                relatedImageView3.download(from: relatedArtwork!.thumbUrl)
+                relatedImageView3.layer.cornerRadius = 13
+                relatedImageView3.layer.masksToBounds = true
+                relatedOverlay3.layer.cornerRadius = 13
+                relatedOverlay3.layer.masksToBounds = true
+            }
+        } else {
+            artLabel.text = nil
+            artDescription.text = nil
+            artImageView.image = nil
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateUI()
+    }
+    
+    func openRelated(_ relatedIndex: Int) {
+        // first get storyboard ref
+        let storyboard = UIStoryboard(name: "HomeAndDetails", bundle: nil)
+        
+        // then instanciate controller
+        let viewController = storyboard.instantiateViewController(withIdentifier: "ArtDetailController") as! ArtDetailViewController
+        
+        viewController.artwork = Artwork.getArtwork(id: relatedIndex)
+        
+        // finally push it
+        self.navigationController?.pushViewController(viewController, animated:true)
+    }
+    
+    @IBAction func onRelated1Tap(_ sender: Any) {
+        openRelated(artwork!.related[0])
+    }
+    
+    @IBAction func onRelated2Tap(_ sender: Any) {
+        openRelated(artwork!.related[1])
+    }
+    
+    
+    @IBAction func onRelatedTap(_ sender: Any) {
+        openRelated(artwork!.related[2])
+    }
+    
     /*
     // MARK: - Navigation
 

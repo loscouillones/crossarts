@@ -283,9 +283,19 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     
     func pushNextViewController() {
         // find a way to push this to the viewcontroller ?
-        let artworkId = Artwork.artworks[selectedCell]
 //        let viewController = ArtDetailViewController(nibName: "ArtDetailViewController", bundle: nil)
 //        self.navigationController?.pushViewController(viewController, animated: true)
         performSegue(withIdentifier: "artDetail", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "artDetail":
+            let controller = segue.destination as! ArtDetailViewController
+            controller.artwork = Artwork.artworks[selectedCell]
+            
+        default:
+            print("Plop")
+        }
     }
 }
