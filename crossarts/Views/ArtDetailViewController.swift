@@ -9,14 +9,17 @@
 import UIKit
 
 class ArtDetailViewController: UIViewController {
-
+    var artwork:Artwork?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "detail"
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     /*
     // MARK: - Navigation
 
