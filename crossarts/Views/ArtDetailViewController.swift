@@ -62,7 +62,9 @@ class ArtDetailViewController: UIViewController {
             if artwork!.related.count > 0 {
                 let relatedId = artwork!.related[0]
                 let relatedArtwork = Artwork.getArtwork(id: relatedId)
-                relatedLabel1.text = relatedArtwork?.title
+                let category = Category.getCategory(relatedArtwork!.categoryId)
+                
+                relatedLabel1.text = category.name
                 relatedImageView1.download(from: relatedArtwork!.thumbUrl)
                 relatedImageView1.layer.cornerRadius = 13
                 relatedImageView1.layer.masksToBounds = true
@@ -74,7 +76,8 @@ class ArtDetailViewController: UIViewController {
             if artwork!.related.count > 1 {
                 let relatedId = artwork!.related[1]
                 let relatedArtwork = Artwork.getArtwork(id: relatedId)
-                relatedLabel2.text = relatedArtwork?.title
+                let category = Category.getCategory(relatedArtwork!.categoryId)
+                relatedLabel2.text = category.name
                 relatedImageView2.download(from: relatedArtwork!.thumbUrl)
                 relatedImageView2.layer.cornerRadius = 13
                 relatedImageView2.layer.masksToBounds = true
@@ -86,7 +89,8 @@ class ArtDetailViewController: UIViewController {
             if artwork!.related.count > 2 {
                 let relatedId = artwork!.related[2]
                 let relatedArtwork = Artwork.getArtwork(id: relatedId)
-                relatedLabel3.text = relatedArtwork?.title
+                let category = Category.getCategory(relatedArtwork!.categoryId)
+                relatedLabel3.text = category.name
                 relatedImageView3.download(from: relatedArtwork!.thumbUrl)
                 relatedImageView3.layer.cornerRadius = 13
                 relatedImageView3.layer.masksToBounds = true
@@ -126,8 +130,7 @@ class ArtDetailViewController: UIViewController {
         openRelated(artwork!.related[1])
     }
     
-    
-    @IBAction func onRelatedTap(_ sender: Any) {
+    @IBAction func onRelated3Tap(_ sender: Any) {
         openRelated(artwork!.related[2])
     }
     

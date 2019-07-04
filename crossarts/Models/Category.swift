@@ -31,6 +31,14 @@ struct Category:Equatable, CustomStringConvertible {
         Category(id: 8, name: "Tatouage", color: "rgb(0,0,0)")
     ]
     
+    static func getCategory(_ id: Int) -> Category {
+        let cat = categories.first { (category) -> Bool in
+            return category.id == id
+        }
+        
+        return cat!
+    }
+    
     static func ==(le: Category, re: Category) -> Bool {
         return le.id == re.id
     }
