@@ -13,11 +13,15 @@ class FavoritesListViewCell:  UITableViewCell {
     
     @IBOutlet weak var imgFavList: UIImageView!
     @IBOutlet weak var titleFavList: UILabel!
-    @IBOutlet weak var textFavList: UITextField!
+   
+    @IBOutlet weak var textFavList: UILabel!
     
     // delete button
     var cellDelegate: FavoriteCellDelegate?
     @IBOutlet weak var deleteButton: UIButton!
+    
+    
+    
     var artwork: Artwork! {
         didSet {
             self.updateUI()
@@ -26,7 +30,7 @@ class FavoritesListViewCell:  UITableViewCell {
     
     func updateUI() {
         if let artwork = artwork {
-            imgFavList.download(from: artwork.landscapeUrl)
+            imgFavList.download(from: artwork.thumbUrl)
             titleFavList.text = artwork.title
             textFavList.text = artwork.description
         } else {
@@ -35,16 +39,20 @@ class FavoritesListViewCell:  UITableViewCell {
             textFavList.text = nil
         }
         setBorders()
+        
+/* deleteButton.setImage(UIImage(named: "trashDelelete"), for: .normal) */
     }
     
     func setBorders() {
         imgFavList.layer.cornerRadius = 13.33
         imgFavList.layer.masksToBounds = true
     }
+    
   
     @IBAction func onDelete(_ sender: UIButton) {
         cellDelegate?.didPressDeleteButton(artwork.id)
     }
+    
     //    func yo() {
 //        guard let customFont = UIFont(name: "Lato-Black", size: UIFont.labelFontSize) else {
 //            fatalError("""
