@@ -3,10 +3,10 @@
         {
             "id":10,
             "portraitUrl":"https://www.souljax.com/crossarts/images/ptr-10.jpg",
-            "landscapeUrl":"https://www.souljax.com/crossarts/images/ptr-10.jpg",
-            "thumbUrl":"https://www.souljax.com/crossarts/images/ptr-10.jpg",
+            "landscapeUrl":"https://www.souljax.com/crossarts/images/ldsp-10.jpg",
+            "thumbUrl":"https://www.souljax.com/crossarts/images/thumb-10.jpg",
             "title":"Les Rolling Stones",
-            "description":"",
+            "description":"Le groupe  de rock britannique originaire de Londres s'est formé en 1962 par le guitariste et leader original Brian Jones, le pianiste Ian Stewart, le chanteur Mick Jagger et le guitariste Keith Richards.  La fameuse langue qui leur sert de logo  s’inspire de la déesse indienne de la destruction Kali.",
             "trivia":"Le réalisateur Martin Scorsese a utilisé la chanson des Stones 'Gimme Shelter' dans 4 de ses films.",
             "related":[1,2,3],
             "categoryId":5,
@@ -16,10 +16,10 @@
         {
             "id":11,
             "portraitUrl":"https://www.souljax.com/crossarts/images/ptr-11.jpg",
-            "landscapeUrl":"https://www.souljax.com/crossarts/images/ptr-11.jpg",
-            "thumbUrl":"https://www.souljax.com/crossarts/images/ptr-11.jpg",
+            "landscapeUrl":"https://www.souljax.com/crossarts/images/ldsp-11.jpg",
+            "thumbUrl":"https://www.souljax.com/crossarts/images/thumb-11.jpg",
             "title":"Coney Island",
-            "description":"",
+            "description":"Coney Island est un quartier résidentiel de Brooklyn qui se transforme en destination de relaxation et de loisirs chaque été. Sa plage, la roue Wonder Wheel et Luna Park, un parc d'attractions avec le célèbre parcours de montagnes russes Cyclone sont des lieux très prisés des touristes.",
             "trivia":"Le boardwalk de Coney Island est un des endroits les plus visités de New York.",
             "related":[1,2,3],
             "categoryId":7,
@@ -153,6 +153,45 @@
             "trivia":"",
             "related":[7,8,9],
             "categoryId":4,
+            "tags":[],
+            "date":"2016-06-05T17:20:00Z"
+        },
+        {
+            "id":12,
+            "portraitUrl":"https://www.souljax.com/crossarts/images/ptr-12.jpg",
+            "landscapeUrl":"https://www.souljax.com/crossarts/images/ldsp-12.jpg",
+            "thumbUrl":"https://www.souljax.com/crossarts/images/thumb-12.jpg",
+            "title":"Casse-Noisette / Zenyatta",
+            "description":"Zenyatta fait partie des héros d'Overwatch ayant bénéficié d'un costume de Noël au cours de l'événement \"Féerie hivernale\" 2016. Voici son modèle de Noël 2016, le modèle Casse-Noisette pour Zenyatta, à obtenir dans un coffre de butin de Noël ou bien à acheter 1000 crédits.",
+            "trivia":"",
+            "related":[12,13,14],
+            "categoryId":3,
+            "tags":[],
+            "date":"2016-06-05T17:20:00Z"
+        }
+        {
+            "id":13,
+            "portraitUrl":"https://www.souljax.com/crossarts/images/ptr-13.jpg",
+            "landscapeUrl":"https://www.souljax.com/crossarts/images/ldsp-13.jpg",
+            "thumbUrl":"https://www.souljax.com/crossarts/images/thumb-13.jpg",
+            "title":"Célèbre Casse-Noisette",
+            "description":"Casse-Noisette est un ballet-féerie de Piotr Ilitch Tchaïkovski en deux actes, soit trois tableaux et 15 scènes, présenté pour la première fois le 18 décembre 1892 au théâtre de Saint-Pétersbourg. Huée lors de la première, Casse-Noisette est l’un des ballets les plus aimés aujourd’hui.",
+            "trivia":"",
+            "related":[12,13,14],
+            "categoryId":2,
+            "tags":[],
+            "date":"2016-06-05T17:20:00Z"
+        },
+        {
+            "id":14,
+            "portraitUrl":"https://www.souljax.com/crossarts/images/ptr-14.jpg",
+            "landscapeUrl":"https://www.souljax.com/crossarts/images/ldsp-14.jpg",
+            "thumbUrl":"https://www.souljax.com/crossarts/images/thumb-14.jpg",
+            "title":"Lunaman The Nutcracka",
+            "description":"Le rap et la musique classique semblent de prime abord des styles de musique totalement opposés. Pourtant 2010, le rappeur belge Lunaman a produit un hit \"Nutcracka\", dont le sample a repris des extraits de \"Dance of the Sugar Plum Fairy\", tiré du célèbre ballet Casse-Noisette.",
+            "trivia":"",
+            "related":[12,13,14],
+            "categoryId":5,
             "tags":[],
             "date":"2016-06-05T17:20:00Z"
         }
