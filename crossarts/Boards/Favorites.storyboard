@@ -53,9 +53,10 @@
                                                 <constraint firstAttribute="height" constant="110" id="pl4-QW-Pv7"/>
                                             </constraints>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TW8-tc-sul">
-                                            <rect key="frame" x="305" y="87.5" width="99" height="30"/>
-                                            <state key="normal" title="Delete">
+                                        <button opaque="NO" contentMode="bottomLeft" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TW8-tc-sul">
+                                            <rect key="frame" x="378" y="93" width="26" height="25"/>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                            <state key="normal" title="Delete" image="trashDelete">
                                                 <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
@@ -112,5 +113,6 @@
     </scenes>
     <resources>
         <image name="Tab-Favorites" width="30" height="30"/>
+        <image name="trashDelete" width="512" height="512"/>
     </resources>
 </document>
