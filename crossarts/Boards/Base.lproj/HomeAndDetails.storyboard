@@ -63,6 +63,12 @@
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeCellShadow" translatesAutoresizingMaskIntoConstraints="NO" id="Ap0-Zr-z6n" userLabel="dropShadow">
+                                                    <rect key="frame" x="8" y="584" width="400" height="300"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="300" id="shz-wa-v2r"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZr-Cj-h9o">
                                                     <rect key="frame" x="8" y="124" width="400" height="600"/>
                                                     <subviews>
@@ -121,7 +127,6 @@
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="PZr-Cj-h9o" secondAttribute="height" multiplier="3:4.5" id="2ed-jS-imX"/>
                                                         <constraint firstItem="ETi-iV-UhN" firstAttribute="leading" secondItem="PZr-Cj-h9o" secondAttribute="leading" constant="10" id="7S1-7n-0wB"/>
@@ -167,9 +172,12 @@
                                             <constraint firstItem="4sT-jD-DC1" firstAttribute="leading" secondItem="my7-x4-fhO" secondAttribute="leading" id="2UC-lh-7DS"/>
                                             <constraint firstItem="QNA-uB-jle" firstAttribute="top" secondItem="PZr-Cj-h9o" secondAttribute="top" constant="-5" id="55w-xh-0Ok"/>
                                             <constraint firstItem="PZr-Cj-h9o" firstAttribute="leading" secondItem="my7-x4-fhO" secondAttribute="leadingMargin" id="8HY-Nn-4IH"/>
+                                            <constraint firstItem="Ap0-Zr-z6n" firstAttribute="leading" secondItem="my7-x4-fhO" secondAttribute="leadingMargin" id="9GG-6E-rYt"/>
                                             <constraint firstAttribute="bottom" secondItem="4sT-jD-DC1" secondAttribute="bottom" id="MN9-jI-tYi"/>
+                                            <constraint firstItem="Ap0-Zr-z6n" firstAttribute="trailing" secondItem="my7-x4-fhO" secondAttribute="trailingMargin" id="MSh-xK-gkQ"/>
                                             <constraint firstAttribute="trailing" secondItem="ehN-bF-vll" secondAttribute="trailing" constant="20" id="MpR-2h-kG1"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="PZr-Cj-h9o" secondAttribute="trailing" id="NVF-ix-I7U"/>
+                                            <constraint firstItem="Ap0-Zr-z6n" firstAttribute="top" secondItem="9vy-dj-0En" secondAttribute="top" constant="-60" id="R07-Wp-o2k"/>
                                             <constraint firstAttribute="trailing" secondItem="oDb-h3-zHW" secondAttribute="trailing" id="V31-fZ-dWq"/>
                                             <constraint firstItem="ehN-bF-vll" firstAttribute="leading" secondItem="my7-x4-fhO" secondAttribute="leading" constant="20" id="Y82-oy-2dX"/>
                                             <constraint firstItem="ehN-bF-vll" firstAttribute="top" secondItem="oDb-h3-zHW" secondAttribute="bottom" constant="40" id="aBH-3i-4Uy"/>
@@ -180,6 +188,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="bottomGradientImageView" destination="ZGv-3x-fb0" id="4zr-se-ruu"/>
+                                            <outlet property="dropShadowImageView" destination="Ap0-Zr-z6n" id="NUe-lc-6pL"/>
                                             <outlet property="homeImageView" destination="Zqt-vU-Fs8" id="C2z-Y4-f2H"/>
                                             <outlet property="homeTextView" destination="9vy-dj-0En" id="iDt-un-gtU"/>
                                             <outlet property="homeTitleField" destination="ETi-iV-UhN" id="QqS-63-2L9"/>
@@ -474,5 +483,6 @@
         <image name="Tab-Arts" width="30" height="30"/>
         <image name="gradient-bottom-top" width="10" height="400"/>
         <image name="gradient-top-bottom" width="10" height="400"/>
+        <image name="homeCellShadow" width="400" height="300"/>
     </resources>
 </document>
