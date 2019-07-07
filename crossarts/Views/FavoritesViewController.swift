@@ -9,7 +9,8 @@ import UIKit
 import Foundation
 
 protocol FavoriteCellDelegate : class {
-    func didPressDeleteButton(_ tag: Int)
+    func didPressDeleteButton(_ artworkId: Int)
+    func didPressImageButton(_ artworkId: Int)
 }
 
 class FavoritesViewController: UITableViewController, FavoriteCellDelegate {
@@ -59,5 +60,27 @@ class FavoritesViewController: UITableViewController, FavoriteCellDelegate {
         
         // reload the favorites list
         refreshData()
+    }
+    
+    func didPressImageButton(_ artworkId: Int) {
+        // open details page
+        openArtworkDetail(artworkId)
+    }
+    
+    func openArtworkDetail(_ artworkdId: Int) {
+        // first get storyboard ref
+        let storyboard = UIStoryboard(name: "HomeAndDetails", bundle: nil)
+        
+        // then instanciate controller
+        let viewController = storyboard.instantiateViewController(withIdentifier: "ArtDetailController") as! ArtDetailViewController
+        
+        viewController.artwork = Artwork.getArtwork(id: artworkdId)
+        
+        self.tabBarController?.selectedIndex = 0
+        
+        let navigationController = self.tabBarController?.selectedViewController as! UINavigationController
+        
+        // finally push it to the first tab's nav controller
+        navigationController.pushViewController(viewController, animated:true)
     }
 }
