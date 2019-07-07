@@ -53,9 +53,15 @@
                                                 <constraint firstAttribute="height" constant="110" id="pl4-QW-Pv7"/>
                                             </constraints>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TW8-tc-sul">
-                                            <rect key="frame" x="305" y="87.5" width="99" height="30"/>
-                                            <state key="normal" title="Delete">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TW8-tc-sul">
+                                            <rect key="frame" x="376" y="93" width="32" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="32" id="MoK-QU-lQN"/>
+                                                <constraint firstAttribute="height" constant="25" id="ZT3-Vn-0Wt"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="ixd-sE-1gz"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="ngT-lu-WSu"/>
+                                            </constraints>
+                                            <state key="normal" title="Delete" image="trashDelete">
                                                 <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
@@ -63,27 +69,26 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlL-en-HqR">
-                                            <rect key="frame" x="138" y="38" width="156" height="16"/>
+                                            <rect key="frame" x="138" y="38" width="181" height="16"/>
                                             <fontDescription key="fontDescription" name="Lato-Light" family="Lato Light" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="TW8-tc-sul" firstAttribute="leading" secondItem="1Nf-N9-zzG" secondAttribute="trailing" constant="175" id="5HS-xJ-JPZ"/>
+                                        <constraint firstItem="TW8-tc-sul" firstAttribute="leading" secondItem="1Nf-N9-zzG" secondAttribute="trailing" constant="246" id="5HS-xJ-JPZ"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="nlL-en-HqR" secondAttribute="bottom" constant="10" id="9SO-Tq-C9g"/>
                                         <constraint firstItem="nlL-en-HqR" firstAttribute="leading" secondItem="1Nf-N9-zzG" secondAttribute="trailing" constant="8" id="DVz-tg-xuE"/>
-                                        <constraint firstAttribute="bottom" secondItem="TW8-tc-sul" secondAttribute="bottom" constant="10" id="Ie9-q3-XBh"/>
+                                        <constraint firstAttribute="bottom" secondItem="TW8-tc-sul" secondAttribute="bottom" constant="11.5" id="Ie9-q3-XBh"/>
                                         <constraint firstItem="1Nf-N9-zzG" firstAttribute="leading" secondItem="Dir-Jw-4nM" secondAttribute="leading" constant="20" id="L9E-Ba-lgk"/>
-                                        <constraint firstItem="TW8-tc-sul" firstAttribute="leading" secondItem="nlL-en-HqR" secondAttribute="trailing" constant="11" id="P64-1o-36T"/>
+                                        <constraint firstItem="TW8-tc-sul" firstAttribute="leading" secondItem="nlL-en-HqR" secondAttribute="trailing" constant="57" id="P64-1o-36T"/>
                                         <constraint firstAttribute="trailing" secondItem="BkC-a2-a41" secondAttribute="trailing" constant="10" id="VAW-U9-Dcf"/>
-                                        <constraint firstAttribute="bottom" secondItem="TW8-tc-sul" secondAttribute="bottom" constant="12" id="ZVO-Cp-o2z"/>
                                         <constraint firstItem="1Nf-N9-zzG" firstAttribute="top" secondItem="Dir-Jw-4nM" secondAttribute="top" constant="9" id="fgn-Sw-6hy"/>
                                         <constraint firstItem="nlL-en-HqR" firstAttribute="top" secondItem="BkC-a2-a41" secondAttribute="bottom" constant="8" id="h05-LG-Crm"/>
                                         <constraint firstItem="BkC-a2-a41" firstAttribute="top" secondItem="1Nf-N9-zzG" secondAttribute="top" id="i17-mU-zAZ"/>
-                                        <constraint firstAttribute="trailing" secondItem="TW8-tc-sul" secondAttribute="trailing" constant="10" id="i8i-Pd-c8U"/>
+                                        <constraint firstAttribute="trailing" secondItem="TW8-tc-sul" secondAttribute="trailing" constant="6" id="i8i-Pd-c8U"/>
                                         <constraint firstItem="BkC-a2-a41" firstAttribute="leading" secondItem="1Nf-N9-zzG" secondAttribute="trailing" constant="8" id="mTN-Xq-My2"/>
-                                        <constraint firstAttribute="trailing" secondItem="TW8-tc-sul" secondAttribute="trailing" constant="10" id="oCe-Zf-uir"/>
+                                        <constraint firstAttribute="trailing" secondItem="TW8-tc-sul" secondAttribute="trailing" constant="6" id="oCe-Zf-uir"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -112,5 +117,6 @@
     </scenes>
     <resources>
         <image name="Tab-Favorites" width="30" height="30"/>
+        <image name="trashDelete" width="512" height="512"/>
     </resources>
 </document>
