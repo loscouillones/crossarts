@@ -24,6 +24,8 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var bottomGradientImageView: UIImageView!
     
+    @IBOutlet weak var dropShadowImageView: UIImageView!
+    
     var art: Artwork! {
         didSet {
             self.updateUI()
@@ -87,7 +89,7 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
     }
     
     func setShadow() {
-        // homeImageView.dropShadow()
+        homeUIView.dropShadow()
 //        var shadowLayer: CAShapeLayer!
 //        let cornerRadius: CGFloat = 18.0
 //        let fillColor: UIColor = .white
