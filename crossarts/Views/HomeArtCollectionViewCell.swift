@@ -63,9 +63,15 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
     func setBorders() {
         homeUIView.layer.cornerRadius = 18.0
         homeUIView.layer.masksToBounds = true
+//        homeUIView.layer.shadowOpacity = 0.25
+//        homeUIView.layer.shadowOffset = CGSize(width: 0, height: 10)
+//        homeUIView.layer.shadowRadius = 20
         
         homeImageView.layer.cornerRadius = 18.0
         homeImageView.layer.masksToBounds = true
+//        homeImageView.layer.shadowOpacity = 0.25
+//        homeImageView.layer.shadowOffset = CGSize(width: 0, height: 10)
+//        homeImageView.layer.shadowRadius = 20
     }
     
     @IBAction func onLikeTap(_ sender: Any) {
