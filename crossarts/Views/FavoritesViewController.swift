@@ -67,20 +67,36 @@ class FavoritesViewController: UITableViewController, FavoriteCellDelegate {
         openArtworkDetail(artworkId)
     }
     
-    func openArtworkDetail(_ artworkdId: Int) {
+    func openArtworkDetail(_ artworkId: Int) {
         // first get storyboard ref
         let storyboard = UIStoryboard(name: "HomeAndDetails", bundle: nil)
         
         // then instanciate controller
         let viewController = storyboard.instantiateViewController(withIdentifier: "ArtDetailController") as! ArtDetailViewController
         
-        viewController.artwork = Artwork.getArtwork(id: artworkdId)
+        viewController.artwork = Artwork.getArtwork(id: artworkId)
         
         self.tabBarController?.selectedIndex = 0
         
         let navigationController = self.tabBarController?.selectedViewController as! UINavigationController
         
-        // finally push it to the first tab's nav controller
-        navigationController.pushViewController(viewController, animated:true)
+        let currentViewController = navigationController.viewControllers.last
+        
+        if let detailsController = currentViewController as? ArtDetailViewController {
+            // only push a new controller if we were not showing the same art before
+            if detailsController.artwork?.id != artworkId {
+                // set back button
+                let backItem = UIBarButtonItem()
+                backItem.title = detailsController.artwork?.title
+                detailsController.navigationItem.backBarButtonItem = backItem
+                navigationController.pushViewController(viewController, animated:true)
+            }
+        } else {
+            let backItem = UIBarButtonItem()
+            backItem.title = "Cross'Cards du jour"
+            currentViewController?.navigationItem.backBarButtonItem = backItem
+            // we came from home carrousel
+            navigationController.pushViewController(viewController, animated:true)
+        }
     }
 }

@@ -174,6 +174,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
             let controller = segue.destination as! ArtDetailViewController
             controller.artwork = Artwork.artworks[selectedCell]
             
+            // set back button
+            let backItem = UIBarButtonItem()
+            backItem.title = "Cross'Cards du jour"
+            navigationItem.backBarButtonItem = backItem
+            
         default:
             print("defaultSegue")
         }
