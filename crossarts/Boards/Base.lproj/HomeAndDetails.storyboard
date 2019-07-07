@@ -84,10 +84,10 @@
                                                             <rect key="frame" x="0.0" y="482" width="400" height="118"/>
                                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-top-bottom" translatesAutoresizingMaskIntoConstraints="NO" id="AmT-9E-dxj" userLabel="TopGradient">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-top-bottom" translatesAutoresizingMaskIntoConstraints="NO" id="AmT-9E-dxj" userLabel="TopGradient">
                                                             <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
                                                         </imageView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-bottom-top" translatesAutoresizingMaskIntoConstraints="NO" id="ZGv-3x-fb0" userLabel="BottomGradient">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-bottom-top" translatesAutoresizingMaskIntoConstraints="NO" id="ZGv-3x-fb0" userLabel="BottomGradient">
                                                             <rect key="frame" x="0.0" y="220" width="400" height="380"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="380" id="2dO-TT-PW4"/>
@@ -99,7 +99,7 @@
                                                                 <constraint firstAttribute="height" constant="80" id="Z6h-ug-RfQ"/>
                                                             </constraints>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             <connections>
                                                                 <outlet property="delegate" destination="Zqt-vU-Fs8" id="x60-RE-Tcl"/>
@@ -111,23 +111,13 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La Joconde" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ir-tD-NBJ">
-                                                            <rect key="frame" x="10" y="10" width="330" height="60"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="60" id="QQ0-NT-AsT"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="Lato-Black" family="Lato Black" pointSize="29"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                            <size key="shadowOffset" width="0.0" height="0.0"/>
-                                                        </label>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETi-iV-UhN">
                                                             <rect key="frame" x="10" y="0.0" width="330" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="100" id="lVz-CO-49v"/>
                                                             </constraints>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Black" family="Lato Black" pointSize="28"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                     </subviews>
@@ -141,7 +131,6 @@
                                                         <constraint firstItem="AmT-9E-dxj" firstAttribute="bottom" secondItem="ETi-iV-UhN" secondAttribute="bottom" constant="100" id="CNn-AI-bee"/>
                                                         <constraint firstItem="L4w-hT-zYK" firstAttribute="bottom" secondItem="9vy-dj-0En" secondAttribute="bottom" id="Hba-mY-Bbb"/>
                                                         <constraint firstItem="9vy-dj-0En" firstAttribute="leading" secondItem="PZr-Cj-h9o" secondAttribute="leading" constant="10" id="Lji-rb-lzH"/>
-                                                        <constraint firstItem="0ir-tD-NBJ" firstAttribute="leading" secondItem="PZr-Cj-h9o" secondAttribute="leading" constant="10" id="Nm2-fW-ACz"/>
                                                         <constraint firstItem="9vy-dj-0En" firstAttribute="top" secondItem="fsp-m0-Xos" secondAttribute="bottom" constant="5" id="RT6-Ef-ya1"/>
                                                         <constraint firstItem="Zqt-vU-Fs8" firstAttribute="top" secondItem="PZr-Cj-h9o" secondAttribute="top" id="S2q-3n-FH1"/>
                                                         <constraint firstAttribute="trailing" secondItem="fsp-m0-Xos" secondAttribute="trailing" id="Tda-dQ-8pg"/>
@@ -157,9 +146,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="ZGv-3x-fb0" secondAttribute="trailing" id="eoJ-KK-mxl"/>
                                                         <constraint firstAttribute="bottom" secondItem="Zqt-vU-Fs8" secondAttribute="bottom" id="gVQ-22-S1V"/>
                                                         <constraint firstAttribute="trailing" secondItem="ETi-iV-UhN" secondAttribute="trailing" constant="60" id="hCn-XG-p5C"/>
-                                                        <constraint firstAttribute="trailing" secondItem="0ir-tD-NBJ" secondAttribute="trailing" constant="60" id="i9c-ls-XeY"/>
                                                         <constraint firstItem="9vy-dj-0En" firstAttribute="bottom" secondItem="ZGv-3x-fb0" secondAttribute="bottom" id="lq6-T5-mxF"/>
-                                                        <constraint firstItem="0ir-tD-NBJ" firstAttribute="top" secondItem="PZr-Cj-h9o" secondAttribute="top" constant="10" id="smJ-XC-pci"/>
                                                         <constraint firstItem="fsp-m0-Xos" firstAttribute="leading" secondItem="PZr-Cj-h9o" secondAttribute="leading" constant="14" id="t8Y-vA-urO"/>
                                                     </constraints>
                                                 </view>
@@ -196,7 +183,6 @@
                                             <outlet property="homeImageView" destination="Zqt-vU-Fs8" id="C2z-Y4-f2H"/>
                                             <outlet property="homeTextView" destination="9vy-dj-0En" id="iDt-un-gtU"/>
                                             <outlet property="homeTitleField" destination="ETi-iV-UhN" id="QqS-63-2L9"/>
-                                            <outlet property="homeTitleLabel" destination="0ir-tD-NBJ" id="XGg-Vj-wzI"/>
                                             <outlet property="homeUIView" destination="PZr-Cj-h9o" id="fhq-kH-8Uc"/>
                                             <outlet property="likeButton" destination="QNA-uB-jle" id="zhO-IN-J6L"/>
                                         </connections>
@@ -443,16 +429,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1wc-vf-QZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
-        </scene>
-        <!--About-->
-        <scene sceneID="llO-by-4GF">
-            <objects>
-                <viewControllerPlaceholder storyboardName="About" referencedIdentifier="About" id="eNn-r2-cN5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="MaX-Wg-g7U"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ln-xF-4TK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-868" y="533"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="Fa7-UM-N2p">
