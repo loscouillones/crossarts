@@ -53,6 +53,11 @@ class FavoritesListViewCell:  UITableViewCell {
         cellDelegate?.didPressDeleteButton(artwork.id)
     }
     
+    
+    @IBAction func onImageTap(_ sender: Any) {
+        cellDelegate?.didPressImageButton(artwork.id)
+    }
+    
     //    func yo() {
 //        guard let customFont = UIFont(name: "Lato-Black", size: UIFont.labelFontSize) else {
 //            fatalError("""
