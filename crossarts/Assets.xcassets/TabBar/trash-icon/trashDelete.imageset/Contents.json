@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "trashDelete.png",
+      "filename" : "Icon-App-29x29@1x.png",
       "scale" : "1x"
     },
     {
@@ -11,6 +11,7 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "trashDelete.png",
       "scale" : "3x"
     }
   ],
