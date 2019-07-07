@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CrossArts-lauchscreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="9PR-DK-naz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CrossArts-lauchscreen" translatesAutoresizingMaskIntoConstraints="NO" id="9PR-DK-naz">
                                 <rect key="frame" x="0.0" y="35" width="414" height="846"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -36,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CrossArts-lauchscreen.png" width="413" height="830"/>
+        <image name="CrossArts-lauchscreen" width="826" height="1660"/>
     </resources>
 </document>
