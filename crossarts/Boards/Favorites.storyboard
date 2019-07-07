@@ -21,7 +21,7 @@
         <scene sceneID="N8F-aG-dS1">
             <objects>
                 <tableViewController storyboardIdentifier="Favorites" id="q1B-97-zip" customClass="FavoritesViewController" customModule="crossarts" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="56n-pO-byq">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="56n-pO-byq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,6 +82,7 @@
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="nlL-en-HqR" secondAttribute="bottom" constant="10" id="9SO-Tq-C9g"/>
                                         <constraint firstItem="nlL-en-HqR" firstAttribute="leading" secondItem="1Nf-N9-zzG" secondAttribute="trailing" constant="8" id="DVz-tg-xuE"/>
                                         <constraint firstItem="1Nf-N9-zzG" firstAttribute="leading" secondItem="Dir-Jw-4nM" secondAttribute="leading" constant="20" id="L9E-Ba-lgk"/>
+                                        <constraint firstItem="Wjd-vm-Teb" firstAttribute="width" secondItem="1Nf-N9-zzG" secondAttribute="width" id="LnH-dH-jY4"/>
                                         <constraint firstItem="Wjd-vm-Teb" firstAttribute="top" secondItem="1Nf-N9-zzG" secondAttribute="top" id="OMp-Fo-X6u"/>
                                         <constraint firstItem="TW8-tc-sul" firstAttribute="leading" secondItem="nlL-en-HqR" secondAttribute="trailing" constant="11" id="P64-1o-36T"/>
                                         <constraint firstItem="Wjd-vm-Teb" firstAttribute="bottom" secondItem="1Nf-N9-zzG" secondAttribute="bottom" id="QiU-Wq-jrW"/>
@@ -98,7 +99,6 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="deleteButton" destination="TW8-tc-sul" id="bik-GL-npU"/>
                                     <outlet property="imgFavList" destination="1Nf-N9-zzG" id="odz-i8-2qu"/>
                                     <outlet property="textFavList" destination="nlL-en-HqR" id="zE7-fx-g8b"/>
                                     <outlet property="titleFavList" destination="BkC-a2-a41" id="VAO-x4-mtM"/>

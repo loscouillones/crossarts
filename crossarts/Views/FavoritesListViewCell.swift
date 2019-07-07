@@ -16,11 +16,8 @@ class FavoritesListViewCell:  UITableViewCell {
    
     @IBOutlet weak var textFavList: UILabel!
     
-    // delete button
+    // delete + details buttons
     var cellDelegate: FavoriteCellDelegate?
-    @IBOutlet weak var deleteButton: UIButton!
-    
-    
     
     var artwork: Artwork! {
         didSet {
@@ -40,7 +37,6 @@ class FavoritesListViewCell:  UITableViewCell {
         }
         setBorders()
         
-/* deleteButton.setImage(UIImage(named: "trashDelelete"), for: .normal) */
     }
     
     func setBorders() {
@@ -57,18 +53,6 @@ class FavoritesListViewCell:  UITableViewCell {
     @IBAction func onImageTap(_ sender: Any) {
         cellDelegate?.didPressImageButton(artwork.id)
     }
-    
-    //    func yo() {
-//        guard let customFont = UIFont(name: "Lato-Black", size: UIFont.labelFontSize) else {
-//            fatalError("""
-//    Failed to load the "CustomFont-Light" font.
-//    Make sure the font file is included in the project and the font name is spelled correctly.
-//    """
-//            )
-//        }
-//        titleFavList.font = customFont //UIFontMetrics.default.scaledFont(for: customFont)
-//        //label.adjustsFontForContentSizeCategory = true
-//    }
 }
 
 
