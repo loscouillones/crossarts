@@ -484,7 +484,7 @@
         <scene sceneID="LQH-7I-fch">
             <objects>
                 <navigationController title="Test 1" automaticallyAdjustsScrollViewInsets="NO" id="tof-tS-I6h" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Arts" image="Tab-Arts" id="yuO-Pi-KND"/>
+                    <tabBarItem key="tabBarItem" title="Arts" image="tab-cards" id="yuO-Pi-KND"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cPY-45-FOq">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -501,9 +501,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Tab-Arts" width="30" height="30"/>
         <image name="gradient-bottom-top" width="10" height="400"/>
         <image name="gradient-top-bottom" width="10" height="400"/>
         <image name="homeCellShadow" width="400" height="300"/>
+        <image name="tab-cards" width="29" height="29"/>
     </resources>
 </document>

@@ -110,7 +110,7 @@
                             <outlet property="delegate" destination="q1B-97-zip" id="CEL-Sd-9kt"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Favoris" image="Tab-Favorites" id="wKu-z1-YGg"/>
+                    <tabBarItem key="tabBarItem" title="Favoris" image="tab-heart" id="wKu-z1-YGg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="favoritesTableView" destination="56n-pO-byq" id="QJc-o5-hOn"/>
@@ -122,7 +122,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Tab-Favorites" width="30" height="30"/>
+        <image name="tab-heart" width="29" height="29"/>
         <image name="trashDelete" width="29" height="29"/>
     </resources>
 </document>

@@ -33,7 +33,7 @@
                             <outlet property="delegate" destination="R9A-Rs-yk0" id="6fo-5J-GhS"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Badges" image="Tab-Badges" id="PvO-eT-Rph"/>
+                    <tabBarItem key="tabBarItem" title="Badges" image="tab-badges" id="PvO-eT-Rph"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H7V-iD-E8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -42,7 +42,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Tab-Badges" width="30" height="30"/>
         <image name="badges" width="709" height="1258"/>
+        <image name="tab-badges" width="29" height="29"/>
     </resources>
 </document>
