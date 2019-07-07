@@ -59,7 +59,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UIScroll
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Arts"
+//        title = "Arts"
         // navigationItem.title = "navItem"
         loadHomeData()
         
