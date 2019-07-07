@@ -40,6 +40,9 @@ class ArtDetailViewController: UIViewController {
     
     @IBOutlet weak var relatedOverlay3: UIView!
     
+    @IBOutlet weak var topGradientImageView: UIImageView!
+    
+    @IBOutlet weak var likeButton: LikeButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "detail"
@@ -57,6 +60,9 @@ class ArtDetailViewController: UIViewController {
             // rounded corners
             artImageView.layer.cornerRadius = 13
             artImageView.layer.masksToBounds = true
+            
+            topGradientImageView.layer.cornerRadius = 13
+            topGradientImageView.layer.masksToBounds = true
             
             // related 1
             if artwork!.related.count > 0 {
@@ -104,9 +110,15 @@ class ArtDetailViewController: UIViewController {
         }
     }
     
+    func updateLikeStatus() {
+        // get favorite status
+        likeButton.isLiked = User.settings.hasFavorite(favoriteId: artwork!.id)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateUI()
+        updateLikeStatus()
     }
     
     func openRelated(_ relatedIndex: Int) {
@@ -132,6 +144,17 @@ class ArtDetailViewController: UIViewController {
     
     @IBAction func onRelated3Tap(_ sender: Any) {
         openRelated(artwork!.related[2])
+    }
+    
+    
+    @IBAction func onLilkeTap(_ sender: Any) {
+        likeButton.isLiked = !likeButton.isLiked
+        if likeButton.isLiked {
+            likeButton.doLike()
+            User.settings.addFavorite(favoriteId: artwork!.id)
+        } else {
+            User.settings.removeFavorite(favoriteId: artwork!.id)
+        }
     }
     
     /*

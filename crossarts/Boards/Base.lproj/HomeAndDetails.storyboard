@@ -252,6 +252,9 @@
                                 <fontDescription key="fontDescription" name="Lato-Light" family="Lato Light" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-top-bottom" translatesAutoresizingMaskIntoConstraints="NO" id="H3V-C3-YSQ" userLabel="Top Gradient">
+                                <rect key="frame" x="20" y="172" width="374" height="75"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Découvrez aussi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X69-lT-zz0">
                                 <rect key="frame" x="20" y="630" width="374" height="30"/>
                                 <constraints>
@@ -371,23 +374,39 @@
                                     <constraint firstAttribute="height" constant="110" id="H08-DH-Ssr"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifw-lc-bfo" userLabel="Like Button" customClass="LikeButton" customModule="crossarts" customModuleProvider="target">
+                                <rect key="frame" x="348" y="177" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9HX-KF-M3G"/>
+                                    <constraint firstAttribute="width" constant="46" id="jc2-pW-MEw"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="onLilkeTap:" destination="hxd-HG-2lN" eventType="touchUpInside" id="9o5-Vf-vTB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Vag-ha-T6T" firstAttribute="trailing" secondItem="Dwc-QJ-M0f" secondAttribute="trailing" constant="20" id="0Zd-ck-PRZ"/>
                             <constraint firstItem="VZa-XJ-qlL" firstAttribute="leading" secondItem="Vag-ha-T6T" secondAttribute="leading" constant="20" id="5pJ-ot-06y"/>
+                            <constraint firstItem="H3V-C3-YSQ" firstAttribute="height" secondItem="Viw-N7-bD8" secondAttribute="height" multiplier="0.3" id="GtM-7H-L5c"/>
+                            <constraint firstItem="H3V-C3-YSQ" firstAttribute="trailing" secondItem="Viw-N7-bD8" secondAttribute="trailing" id="K4L-D8-Ddf"/>
+                            <constraint firstItem="H3V-C3-YSQ" firstAttribute="top" secondItem="Viw-N7-bD8" secondAttribute="top" id="LmN-HR-OPZ"/>
                             <constraint firstItem="X69-lT-zz0" firstAttribute="leading" secondItem="Vag-ha-T6T" secondAttribute="leading" constant="20" id="Lxb-Wt-xyt"/>
                             <constraint firstItem="waS-sM-8md" firstAttribute="leading" secondItem="Vag-ha-T6T" secondAttribute="leading" constant="20" id="Sd2-QE-rIg"/>
                             <constraint firstItem="Dwc-QJ-M0f" firstAttribute="top" secondItem="Vag-ha-T6T" secondAttribute="top" constant="25" id="VNO-7y-ipB"/>
                             <constraint firstItem="X69-lT-zz0" firstAttribute="bottom" secondItem="waS-sM-8md" secondAttribute="top" constant="-18" id="X8X-o4-rKt"/>
+                            <constraint firstItem="Ifw-lc-bfo" firstAttribute="top" secondItem="Viw-N7-bD8" secondAttribute="top" constant="5" id="XTJ-9Z-bIG"/>
                             <constraint firstItem="Vag-ha-T6T" firstAttribute="trailing" secondItem="VZa-XJ-qlL" secondAttribute="trailing" constant="20" id="fsB-vP-KLi"/>
                             <constraint firstItem="waS-sM-8md" firstAttribute="top" secondItem="VZa-XJ-qlL" secondAttribute="bottom" constant="20" id="jZ2-q5-2f8"/>
+                            <constraint firstItem="Ifw-lc-bfo" firstAttribute="trailing" secondItem="Viw-N7-bD8" secondAttribute="trailing" id="lsn-dG-Xfy"/>
                             <constraint firstItem="Dwc-QJ-M0f" firstAttribute="leading" secondItem="Vag-ha-T6T" secondAttribute="leading" constant="20" id="mOI-wg-V6r"/>
                             <constraint firstItem="Vag-ha-T6T" firstAttribute="trailing" secondItem="waS-sM-8md" secondAttribute="trailing" constant="20" id="nCU-hI-OmI"/>
                             <constraint firstItem="Viw-N7-bD8" firstAttribute="top" secondItem="Dwc-QJ-M0f" secondAttribute="bottom" constant="25" id="oIo-q0-fSK"/>
                             <constraint firstItem="Vag-ha-T6T" firstAttribute="trailing" secondItem="Viw-N7-bD8" secondAttribute="trailing" constant="20" id="s0t-12-wrG"/>
                             <constraint firstItem="Vag-ha-T6T" firstAttribute="trailing" secondItem="X69-lT-zz0" secondAttribute="trailing" constant="20" id="vas-P4-7AK"/>
                             <constraint firstItem="Viw-N7-bD8" firstAttribute="leading" secondItem="Vag-ha-T6T" secondAttribute="leading" constant="20" id="vdX-Es-W6r"/>
+                            <constraint firstItem="H3V-C3-YSQ" firstAttribute="leading" secondItem="Viw-N7-bD8" secondAttribute="leading" id="wJK-MI-x82"/>
                             <constraint firstItem="VZa-XJ-qlL" firstAttribute="top" secondItem="Viw-N7-bD8" secondAttribute="bottom" constant="18" id="zHE-H0-whW"/>
                             <constraint firstItem="waS-sM-8md" firstAttribute="bottom" secondItem="Vag-ha-T6T" secondAttribute="bottom" constant="-25" id="zdb-aT-wPW"/>
                         </constraints>
@@ -399,6 +418,7 @@
                         <outlet property="artDescription" destination="VZa-XJ-qlL" id="rXO-V6-CN6"/>
                         <outlet property="artImageView" destination="Viw-N7-bD8" id="GIm-l9-Ru4"/>
                         <outlet property="artLabel" destination="Dwc-QJ-M0f" id="fxq-9V-dB0"/>
+                        <outlet property="likeButton" destination="Ifw-lc-bfo" id="yaM-hB-UuI"/>
                         <outlet property="relatedImageView1" destination="5Dg-qK-du6" id="KeS-0Q-Xvf"/>
                         <outlet property="relatedImageView2" destination="fat-hw-X62" id="Cfc-ND-N2I"/>
                         <outlet property="relatedImageView3" destination="wJW-oE-O95" id="65a-b0-aeH"/>
@@ -408,6 +428,7 @@
                         <outlet property="relatedOverlay1" destination="ZZ7-KR-Gzo" id="wql-Am-JwJ"/>
                         <outlet property="relatedOverlay2" destination="zIz-rT-lvH" id="lll-QC-C1c"/>
                         <outlet property="relatedOverlay3" destination="DgO-5m-E29" id="Nfl-qe-0uG"/>
+                        <outlet property="topGradientImageView" destination="H3V-C3-YSQ" id="RIR-38-H12"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnB-RB-T5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
