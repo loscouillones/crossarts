@@ -45,10 +45,16 @@ class ArtDetailViewController: UIViewController {
     @IBOutlet weak var likeButton: LikeButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "detail"
-        
+        title = ""
         
         // Do any additional setup after loading the view.
+    }
+    
+    func setBackButtonTitle(_ text: String) {
+        // set back button
+        let backItem = UIBarButtonItem()
+        backItem.title = text
+        navigationItem.backBarButtonItem = backItem
     }
     
     func updateUI() {
@@ -122,6 +128,11 @@ class ArtDetailViewController: UIViewController {
     }
     
     func openRelated(_ relatedIndex: Int) {
+        // set back button
+        let backItem = UIBarButtonItem()
+        backItem.title = artwork?.title
+        navigationItem.backBarButtonItem = backItem
+        
         // first get storyboard ref
         let storyboard = UIStoryboard(name: "HomeAndDetails", bundle: nil)
         
