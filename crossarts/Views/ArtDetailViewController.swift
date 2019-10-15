@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ArtDetailViewController: UIViewController {
     var artwork:Artwork?
@@ -61,7 +62,9 @@ class ArtDetailViewController: UIViewController {
         if artwork != nil {
             artLabel.text = artwork?.title
             artDescription.text = artwork?.description
-            artImageView.download(from: artwork!.landscapeUrl)
+            artImageView.kf.indicatorType = .activity
+            artImageView.kf.setImage(with: artwork!.landscapeUrl)
+            // artImageView.download(from: artwork!.landscapeUrl)
             
             // rounded corners
             artImageView.layer.cornerRadius = 13
@@ -77,7 +80,9 @@ class ArtDetailViewController: UIViewController {
                 let category = Category.getCategory(relatedArtwork!.categoryId)
                 
                 relatedLabel1.text = category.name
-                relatedImageView1.download(from: relatedArtwork!.thumbUrl)
+                // relatedImageView1.download(from: relatedArtwork!.thumbUrl)
+                relatedImageView1.kf.indicatorType = .activity
+                relatedImageView1.kf.setImage(with: relatedArtwork!.thumbUrl)
                 relatedImageView1.layer.cornerRadius = 13
                 relatedImageView1.layer.masksToBounds = true
                 relatedOverlay1.layer.cornerRadius = 13
@@ -90,7 +95,9 @@ class ArtDetailViewController: UIViewController {
                 let relatedArtwork = Artwork.getArtwork(id: relatedId)
                 let category = Category.getCategory(relatedArtwork!.categoryId)
                 relatedLabel2.text = category.name
-                relatedImageView2.download(from: relatedArtwork!.thumbUrl)
+                // relatedImageView2.download(from: relatedArtwork!.thumbUrl)
+                relatedImageView2.kf.indicatorType = .activity
+                relatedImageView2.kf.setImage(with: relatedArtwork!.thumbUrl)
                 relatedImageView2.layer.cornerRadius = 13
                 relatedImageView2.layer.masksToBounds = true
                 relatedOverlay2.layer.cornerRadius = 13
@@ -103,7 +110,9 @@ class ArtDetailViewController: UIViewController {
                 let relatedArtwork = Artwork.getArtwork(id: relatedId)
                 let category = Category.getCategory(relatedArtwork!.categoryId)
                 relatedLabel3.text = category.name
-                relatedImageView3.download(from: relatedArtwork!.thumbUrl)
+                // relatedImageView3.download(from: relatedArtwork!.thumbUrl)
+                relatedImageView3.kf.indicatorType = .activity
+                relatedImageView3.kf.setImage(with: relatedArtwork!.thumbUrl)
                 relatedImageView3.layer.cornerRadius = 13
                 relatedImageView3.layer.masksToBounds = true
                 relatedOverlay3.layer.cornerRadius = 13

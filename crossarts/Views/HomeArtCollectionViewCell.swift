@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeArtCollectionViewCell: UICollectionViewCell {
     
@@ -38,7 +39,9 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
         
         if let art = art {
            // homeImageView.image = UIImage(named: "Stones")
-            homeImageView.download(from: art.portraitUrl)
+            // homeImageView.download(from: art.portraitUrl)
+            homeImageView.kf.indicatorType = .activity
+            homeImageView.kf.setImage(with: art.portraitUrl)
             homeTextView.text = art.trivia
             // homeTitleLabel.text = art.title
             homeTitleField.text = art.title
