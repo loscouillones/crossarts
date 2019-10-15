@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class FavoritesListViewCell:  UITableViewCell {
     
@@ -27,7 +28,9 @@ class FavoritesListViewCell:  UITableViewCell {
     
     func updateUI() {
         if let artwork = artwork {
-            imgFavList.download(from: artwork.thumbUrl)
+            // imgFavList.download(from: artwork.thumbUrl)
+            imgFavList.kf.indicatorType = .activity
+            imgFavList.kf.setImage(with: artwork.thumbUrl)
             titleFavList.text = artwork.title
             textFavList.text = artwork.description
         } else {
